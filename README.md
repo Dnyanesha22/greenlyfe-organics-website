@@ -3,7 +3,7 @@
 A modern responsive landing page for an organic farming business.
 
 ## 🚀 Live Demo
-👉 https://yourusername.github.io/greenlyf-organics-website/
+👉 https://dnyanesha22.github.io/greenlyf-organics-website/
 
 ## 💡 Features
 - Clean UI/UX design
