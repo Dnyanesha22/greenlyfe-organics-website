@@ -19,7 +19,7 @@ A modern responsive landing page for an organic farming business.
 - JavaScript (Vanilla)
 
 ## 📸 Screenshots
-(Add screenshots here)
+![Home Page](screenshots/Homepage.png)
 
 ## 🎯 Purpose
 Built as a real-world business landing page to demonstrate frontend skills.
