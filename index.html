@@ -1,603 +1,253 @@
+cat > /mnt/user-data/outputs/greenlyfe-organics.html << 'HTMLEOF'
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- SEO Meta Tags -->
   <title>Greenlyfe Organics – Certified Organic Farm Products Delivered in Pune</title>
   <meta name="description" content="Greenlyfe Organics connects you directly with certified organic farmers in and around Pune. Fresh, chemical-free vegetables, fruits & grains delivered to your door." />
-  <meta name="keywords" content="organic farm Pune, certified organic vegetables Pune, farm to table Pune, organic food delivery Pune, fresh organic produce Pune, natural farming Pune" />
-  <meta name="author" content="Greenlyfe Organics" />
+  <meta name="keywords" content="organic farm Pune, certified organic vegetables Pune, farm to table Pune, organic food delivery Pune, fresh organic produce Pune" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://Greenlyfeorganics.in/" />
-
-  <!-- Open Graph -->
   <meta property="og:title" content="Greenlyfe Organics – Certified Organic Farm Products in Pune" />
   <meta property="og:description" content="Direct from certified organic farmers to your kitchen. No middlemen, no chemicals, just pure goodness." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://Greenlyfeorganics.in/" />
-  <meta property="og:image" content="https://Greenlyfeorganics.in/og-image.jpg" />
-
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Greenlyfe Organics – Organic Farm to Table in Pune" />
-  <meta name="twitter:description" content="Certified organic produce, directly from farmer to your family in Pune." />
-
-  <!-- Schema.org Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Greenlyfe Organics",
-    "description": "Certified organic farm products delivered directly from farmers to consumers in Pune.",
-    "url": "https://Greenlyfeorganics.in",
-    "telephone": "+9198308311348",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Pune",
-      "addressRegion": "Maharashtra",
-      "addressCountry": "IN"
-    },
-    "areaServed": "Pune",
-    "priceRange": "₹₹",
-    "openingHours": "Mo-Su 07:00-20:00",
-    "sameAs": ["https://wa.me/98308311348"]
-  }
-  </script>
-
-  <!-- Fonts -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Greenlyfe Organics","description":"Certified organic farm products delivered directly from farmers to consumers in Pune.","url":"https://Greenlyfeorganics.in","telephone":"+918308311348","address":{"@type":"PostalAddress","addressLocality":"Pune","addressRegion":"Maharashtra","addressCountry":"IN"},"areaServed":"Pune","priceRange":"₹₹","openingHours":"Mo-Su 07:00-20:00"}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&family=Caveat:wght@500;700&display=swap" rel="stylesheet" />
-
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --cream:#f7f2e8;--parchment:#ede5d0;--bark:#3d2b1f;--moss:#2d5a27;
+      --leaf:#4a8c3f;--sage:#7aad6a;--sunflower:#e8a020;--terracotta:#c05a2a;
+      --white:#ffffff;--text:#2a1f15;--muted:#6b5b4e;--r:16px;
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden}
+    body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:9999;opacity:.5}
 
-    :root {
-      --cream:   #f7f2e8;
-      --parchment: #ede5d0;
-      --bark:    #3d2b1f;
-      --moss:    #2d5a27;
-      --leaf:    #4a8c3f;
-      --sage:    #7aad6a;
-      --sunflower: #e8a020;
-      --terracotta: #c05a2a;
-      --white:   #ffffff;
-      --text:    #2a1f15;
-      --muted:   #6b5b4e;
-      --r: 16px;
-    }
+    /* NAV */
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 5%;transition:background .4s,box-shadow .4s}
+    nav.scrolled{background:rgba(247,242,232,.95);backdrop-filter:blur(12px);box-shadow:0 2px 24px rgba(61,43,31,.10)}
+    .logo-wrap{display:flex;flex-direction:column;gap:.05rem;text-decoration:none}
+    .logo{font-family:'Playfair Display',serif;font-size:1.7rem;font-weight:900;color:var(--bark);display:flex;align-items:center;gap:.4rem}
+    .logo-tagline{font-family:'Caveat',cursive;font-size:.88rem;font-weight:500;color:var(--leaf);letter-spacing:.03em;padding-left:2rem;line-height:1}
+    .nav-links{display:flex;gap:2rem;list-style:none}
+    .nav-links a{text-decoration:none;color:var(--bark);font-size:.95rem;font-weight:500;letter-spacing:.02em;position:relative}
+    .nav-links a::after{content:'';position:absolute;bottom:-3px;left:0;right:100%;height:2px;background:var(--leaf);transition:right .3s ease}
+    .nav-links a:hover::after{right:0}
+    .nav-cta{background:var(--leaf) !important;color:var(--white) !important;padding:.55rem 1.4rem;border-radius:50px;font-weight:500;transition:background .3s,transform .2s !important}
+    .nav-cta:hover{background:var(--moss) !important;transform:translateY(-1px)}
+    .nav-cta::after{display:none !important}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:.3rem}
+    .hamburger span{display:block;width:26px;height:2px;background:var(--bark);border-radius:2px;transition:.3s}
 
-    html { scroll-behavior: smooth; }
+    /* HERO */
+    .hero{min-height:100svh;display:grid;place-items:center;padding:7rem 5% 4rem;position:relative;overflow:hidden;background:radial-gradient(ellipse 80% 60% at 70% 40%,rgba(74,140,63,.18) 0%,transparent 60%),radial-gradient(ellipse 60% 50% at 20% 70%,rgba(232,160,32,.12) 0%,transparent 55%),var(--cream)}
+    .blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.35;animation:drift 12s ease-in-out infinite alternate;pointer-events:none}
+    .blob-1{width:500px;height:500px;background:radial-gradient(#7aad6a,#2d5a27);top:-100px;right:-100px;animation-delay:0s}
+    .blob-2{width:350px;height:350px;background:radial-gradient(#e8a020,#c05a2a);bottom:-80px;left:-80px;animation-delay:-4s}
+    .blob-3{width:250px;height:250px;background:radial-gradient(#4a8c3f,#7aad6a);top:50%;left:45%;animation-delay:-8s}
+    @keyframes drift{0%{transform:translate(0,0) scale(1)}100%{transform:translate(30px,20px) scale(1.08)}}
+    .hero-inner{max-width:900px;text-align:center;position:relative;z-index:1}
+    .hero-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(45,90,39,.12);border:1px solid rgba(45,90,39,.25);color:var(--moss);padding:.45rem 1.2rem;border-radius:50px;font-size:.85rem;font-weight:500;letter-spacing:.04em;margin-bottom:1.8rem;animation:fadeUp .8s ease both}
+    h1{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,7vw,5.5rem);font-weight:900;line-height:1.1;color:var(--bark);animation:fadeUp .9s .15s ease both}
+    h1 em{font-style:italic;color:var(--leaf)}
+    .hero-sub{font-size:clamp(1rem,2.5vw,1.25rem);color:var(--muted);max-width:600px;margin:1.4rem auto 2.4rem;line-height:1.7;animation:fadeUp .9s .3s ease both}
+    .hero-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;animation:fadeUp .9s .45s ease both}
+    .btn-primary{background:var(--leaf);color:var(--white);padding:.9rem 2.2rem;border-radius:50px;border:none;font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:500;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:.5rem;box-shadow:0 8px 32px rgba(74,140,63,.35);transition:transform .25s,box-shadow .25s,background .25s}
+    .btn-primary:hover{background:var(--moss);transform:translateY(-3px);box-shadow:0 14px 40px rgba(74,140,63,.45)}
+    .btn-outline{background:transparent;color:var(--bark);padding:.9rem 2.2rem;border-radius:50px;border:2px solid var(--bark);font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:500;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:.5rem;transition:background .25s,color .25s,transform .25s}
+    .btn-outline:hover{background:var(--bark);color:var(--white);transform:translateY(-3px)}
+    .hero-stats{display:flex;gap:3rem;justify-content:center;margin-top:4rem;flex-wrap:wrap;animation:fadeUp .9s .6s ease both}
+    .stat{text-align:center}
+    .stat-num{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:900;color:var(--bark);display:block}
+    .stat-label{font-size:.85rem;color:var(--muted);letter-spacing:.05em;text-transform:uppercase}
+    .scroll-hint{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.4rem;color:var(--muted);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;animation:bounce 2s infinite}
+    .scroll-hint::after{content:'↓';font-size:1.2rem}
+    @keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
 
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--cream);
-      color: var(--text);
-      overflow-x: hidden;
-    }
+    /* MARQUEE */
+    .marquee-strip{background:var(--moss);color:var(--cream);padding:.9rem 0;overflow:hidden;font-family:'Caveat',cursive;font-size:1.3rem;font-weight:500}
+    .marquee-track{display:flex;animation:marquee 28s linear infinite;width:max-content}
+    .marquee-item{white-space:nowrap;padding:0 2.5rem;display:flex;align-items:center;gap:.6rem}
+    .marquee-item::after{content:'✦';opacity:.5}
+    @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
-    /* ── Noise overlay ── */
-    body::before {
-      content: '';
-      position: fixed; inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
-      pointer-events: none; z-index: 9999; opacity: .5;
-    }
+    /* SECTIONS */
+    section{padding:7rem 5%}
+    .section-label{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--leaf);font-weight:500;margin-bottom:.8rem;display:flex;align-items:center;gap:.5rem}
+    .section-label::before{content:'';width:28px;height:2px;background:var(--leaf);display:inline-block}
+    h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:900;line-height:1.2;color:var(--bark)}
+    h2 em{font-style:italic;color:var(--leaf)}
+    .section-desc{font-size:1.05rem;color:var(--muted);line-height:1.75;margin-top:.8rem;max-width:540px}
+    .reveal{opacity:0;transform:translateY(40px);transition:opacity .8s ease,transform .8s ease}
+    .reveal.visible{opacity:1;transform:none}
+    .reveal-delay-1{transition-delay:.1s}
+    .reveal-delay-2{transition-delay:.2s}
+    .reveal-delay-3{transition-delay:.3s}
+    .reveal-delay-4{transition-delay:.4s}
 
-    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-       NAVBAR
-    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 1.1rem 5%;
-      transition: background .4s, box-shadow .4s;
-    }
-    nav.scrolled {
-      background: rgba(247,242,232,.95);
-      backdrop-filter: blur(12px);
-      box-shadow: 0 2px 24px rgba(61,43,31,.10);
-    }
-    .logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.7rem; font-weight: 900;
-      color: var(--bark); text-decoration: none;
-      display: flex; align-items: center; gap: .4rem;
-    }
-    .logo-leaf { font-size: 1.5rem; }
-    .nav-links { display: flex; gap: 2rem; list-style: none; }
-    .nav-links a {
-      text-decoration: none; color: var(--bark);
-      font-size: .95rem; font-weight: 500; letter-spacing: .02em;
-      position: relative;
-    }
-    .nav-links a::after {
-      content: ''; position: absolute; bottom: -3px; left: 0; right: 100%;
-      height: 2px; background: var(--leaf);
-      transition: right .3s ease;
-    }
-    .nav-links a:hover::after { right: 0; }
-    .nav-cta {
-      background: var(--leaf); color: var(--white) !important;
-      padding: .55rem 1.4rem; border-radius: 50px;
-      font-weight: 500; transition: background .3s, transform .2s !important;
-    }
-    .nav-cta:hover { background: var(--moss) !important; transform: translateY(-1px); }
-    .nav-cta::after { display: none !important; }
-    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
-    .hamburger span { display: block; width: 26px; height: 2px; background: var(--bark); border-radius: 2px; transition: .3s; }
+    /* WHY */
+    .why{background:var(--parchment)}
+    .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:3.5rem}
+    .why-card{background:var(--cream);border-radius:var(--r);padding:2.2rem;position:relative;overflow:hidden;border:1px solid rgba(61,43,31,.08);transition:transform .3s,box-shadow .3s}
+    .why-card:hover{transform:translateY(-6px);box-shadow:0 20px 60px rgba(61,43,31,.12)}
+    .why-card.big{grid-column:span 2;background:var(--moss);color:var(--cream)}
+    .why-card.big .card-title,.why-card.big .card-body{color:var(--cream)}
+    .why-card.big .card-icon{color:var(--sage)}
+    .card-icon{font-size:2.2rem;margin-bottom:1rem}
+    .card-title{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:var(--bark);margin-bottom:.5rem}
+    .card-body{font-size:.95rem;color:var(--muted);line-height:1.65}
+    .card-accent{position:absolute;bottom:-20px;right:-20px;font-size:6rem;opacity:.07;pointer-events:none}
+    .why-header{max-width:500px}
 
-    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-       HERO
-    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-    .hero {
-      min-height: 100svh;
-      display: grid; place-items: center;
-      padding: 7rem 5% 4rem;
-      position: relative; overflow: hidden;
-      background:
-        radial-gradient(ellipse 80% 60% at 70% 40%, rgba(74,140,63,.18) 0%, transparent 60%),
-        radial-gradient(ellipse 60% 50% at 20% 70%, rgba(232,160,32,.12) 0%, transparent 55%),
-        var(--cream);
-    }
+    /* PRODUCTS */
+    .products-header{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem;margin-bottom:3rem}
+    .product-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,max-content));gap:1.5rem;justify-content:center}
+    .product-card{background:var(--white);border-radius:var(--r);overflow:hidden;border:1px solid rgba(61,43,31,.07);transition:transform .3s,box-shadow .3s;cursor:pointer}
+    .product-card:hover{transform:translateY(-8px) scale(1.02);box-shadow:0 24px 64px rgba(61,43,31,.15)}
+    .product-img{height:200px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+    .product-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
+    .product-card:hover .product-img img{transform:scale(1.08)}
+    .p1{background:linear-gradient(135deg,#e8f5e1,#c8e6c0)}
+    .p2{background:linear-gradient(135deg,#fff8e1,#ffe082)}
+    .p3{background:linear-gradient(135deg,#fce4ec,#f48fb1)}
+    .p4{background:linear-gradient(135deg,#e8f5e9,#a5d6a7)}
+    .product-info{padding:1.2rem 1.4rem}
+    .product-name{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--bark)}
+    .product-farmer{font-size:.8rem;color:var(--muted);margin:.2rem 0 .8rem}
+    .product-footer{display:flex;justify-content:space-between;align-items:center;gap:.5rem;flex-wrap:wrap}
+    .product-badge{background:rgba(74,140,63,.12);color:var(--leaf);font-size:.72rem;padding:.25rem .7rem;border-radius:50px;font-weight:500;letter-spacing:.04em}
 
-    /* Floating blobs */
-    .blob { position: absolute; border-radius: 50%; filter: blur(70px); opacity: .35; animation: drift 12s ease-in-out infinite alternate; }
-    .blob-1 { width: 500px; height: 500px; background: radial-gradient(#7aad6a,#2d5a27); top: -100px; right: -100px; animation-delay: 0s; }
-    .blob-2 { width: 350px; height: 350px; background: radial-gradient(#e8a020,#c05a2a); bottom: -80px; left: -80px; animation-delay: -4s; }
-    .blob-3 { width: 250px; height: 250px; background: radial-gradient(#4a8c3f,#7aad6a); top: 50%; left: 45%; animation-delay: -8s; }
-    @keyframes drift { 0% { transform: translate(0,0) scale(1); } 100% { transform: translate(30px,20px) scale(1.08); } }
+    /* VEGETABLES MODAL */
+    .modal-overlay{position:fixed;inset:0;background:rgba(30,18,8,.75);backdrop-filter:blur(8px);z-index:500;display:flex;align-items:center;justify-content:center;padding:1.5rem;opacity:0;pointer-events:none;transition:opacity .35s ease}
+    .modal-overlay.open{opacity:1;pointer-events:all}
+    .modal{background:var(--cream);border-radius:24px;width:100%;max-width:860px;max-height:88vh;overflow-y:auto;position:relative;transform:translateY(30px) scale(.97);transition:transform .35s ease;box-shadow:0 40px 100px rgba(0,0,0,.3)}
+    .modal-overlay.open .modal{transform:none}
+    .modal-header{position:sticky;top:0;z-index:10;background:var(--cream);border-bottom:1px solid rgba(61,43,31,.08);padding:1.5rem 2rem;display:flex;align-items:center;justify-content:space-between}
+    .modal-header h3{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:900;color:var(--bark)}
+    .modal-header h3 em{font-style:italic;color:var(--leaf)}
+    .modal-close{background:none;border:none;cursor:pointer;font-size:1.6rem;color:var(--muted);line-height:1;padding:.3rem;border-radius:50%;transition:background .2s,color .2s;width:2.4rem;height:2.4rem;display:flex;align-items:center;justify-content:center}
+    .modal-close:hover{background:rgba(61,43,31,.08);color:var(--bark)}
+    .modal-body{padding:2rem}
+    .veg-search{width:100%;padding:.75rem 1.2rem;border-radius:50px;border:1.5px solid rgba(61,43,31,.18);background:var(--white);font-family:'DM Sans',sans-serif;font-size:.95rem;color:var(--text);outline:none;margin-bottom:1.5rem;transition:border-color .25s}
+    .veg-search:focus{border-color:var(--leaf)}
+    .veg-cat-label{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--leaf);font-weight:600;margin:1.2rem 0 .8rem;padding-left:.2rem}
+    .veg-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:.9rem;margin-bottom:1rem}
+    .veg-item{background:var(--white);border-radius:14px;padding:1rem .9rem;border:1.5px solid rgba(61,43,31,.07);display:flex;flex-direction:column;align-items:center;gap:.5rem;text-align:center;cursor:pointer;transition:transform .22s,box-shadow .22s,border-color .22s}
+    .veg-item:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(61,43,31,.12);border-color:var(--sage)}
+    .veg-emoji{font-size:2.4rem;line-height:1}
+    .veg-name{font-family:'Playfair Display',serif;font-size:.9rem;font-weight:700;color:var(--bark)}
+    .veg-hindi{font-size:.75rem;color:var(--muted)}
+    .veg-price{font-size:.82rem;font-weight:600;color:var(--leaf);background:rgba(74,140,63,.1);padding:.18rem .55rem;border-radius:20px}
+    .veg-footer-note{text-align:center;font-size:.82rem;color:var(--muted);padding:1.2rem 0 .5rem;border-top:1px solid rgba(61,43,31,.08);margin-top:.5rem}
+    .veg-footer-note a{color:var(--leaf);text-decoration:none;font-weight:600}
+    .no-results{text-align:center;color:var(--muted);padding:2.5rem 0;font-size:1rem}
 
-    .hero-inner { max-width: 900px; text-align: center; position: relative; z-index: 1; }
+    /* HOW */
+    .how{background:var(--bark);color:var(--cream);position:relative;overflow:hidden}
+    .how::before{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(74,140,63,.3),transparent 70%);pointer-events:none}
+    .how h2,.how .section-label{color:var(--cream)}
+    .how .section-label{color:var(--sage)}
+    .how .section-label::before{background:var(--sage)}
+    .steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:4rem}
+    .step{position:relative;padding:2rem;border:1px solid rgba(255,255,255,.1);border-radius:var(--r);background:rgba(255,255,255,.04);transition:background .3s,border-color .3s}
+    .step:hover{background:rgba(255,255,255,.08);border-color:rgba(122,173,106,.4)}
+    .step-num{font-family:'Playfair Display',serif;font-size:4rem;font-weight:900;color:rgba(255,255,255,.08);position:absolute;top:.5rem;right:1rem;line-height:1}
+    .step-icon{font-size:2rem;margin-bottom:1rem}
+    .step h3{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--cream);margin-bottom:.5rem}
+    .step p{font-size:.9rem;color:rgba(237,229,208,.7);line-height:1.6}
+    .steps-grid .step:not(:last-child)::after{content:'→';position:absolute;top:50%;right:-1.2rem;transform:translateY(-50%);color:rgba(122,173,106,.4);font-size:1.4rem;z-index:1}
 
-    .hero-badge {
-      display: inline-flex; align-items: center; gap: .5rem;
-      background: rgba(45,90,39,.12); border: 1px solid rgba(45,90,39,.25);
-      color: var(--moss); padding: .45rem 1.2rem; border-radius: 50px;
-      font-size: .85rem; font-weight: 500; letter-spacing: .04em;
-      margin-bottom: 1.8rem;
-      animation: fadeUp .8s ease both;
-    }
-    .hero-badge span { font-size: 1rem; }
+    /* TESTIMONIALS */
+    .testimonials{background:var(--parchment)}
+    .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3.5rem}
+    .testi-card{background:var(--cream);border-radius:var(--r);padding:2rem;border:1px solid rgba(61,43,31,.08);position:relative;transition:transform .3s}
+    .testi-card:hover{transform:translateY(-4px)}
+    .testi-quote-mark{font-family:'Playfair Display',serif;font-size:5rem;color:rgba(74,140,63,.15);position:absolute;top:.5rem;left:1.2rem;line-height:1}
+    .testi-text{font-size:1rem;color:var(--text);line-height:1.7;margin-bottom:1.4rem;position:relative;z-index:1}
+    .testi-stars{color:var(--sunflower);font-size:1rem;margin-bottom:.4rem}
+    .testi-author{display:flex;align-items:center;gap:.8rem}
+    .testi-avatar{width:42px;height:42px;border-radius:50%;background:var(--sage);display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
+    .testi-name{font-weight:600;font-size:.95rem;color:var(--bark)}
+    .testi-role{font-size:.8rem;color:var(--muted)}
 
-    h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2.8rem, 7vw, 5.5rem);
-      font-weight: 900; line-height: 1.1;
-      color: var(--bark);
-      animation: fadeUp .9s .15s ease both;
-    }
-    h1 em { font-style: italic; color: var(--leaf); }
+    /* CTA */
+    .cta-banner{background:var(--bark);color:var(--cream);text-align:center;padding:6rem 5%;position:relative;overflow:hidden}
+    .cta-banner::before{content:'';position:absolute;top:-150px;left:50%;transform:translateX(-50%);width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(74,140,63,.25),transparent 65%)}
+    .cta-banner h2{color:var(--cream);margin-bottom:1rem;position:relative}
+    .cta-banner p{color:rgba(237,229,208,.75);max-width:480px;margin:0 auto 2.5rem;line-height:1.7;position:relative}
+    .cta-actions{display:flex;justify-content:center;gap:1.2rem;flex-wrap:wrap;position:relative}
+    .btn-whatsapp{background:#25D366;color:var(--white);padding:.9rem 2rem;border-radius:50px;text-decoration:none;font-weight:600;font-size:1rem;display:inline-flex;align-items:center;gap:.6rem;box-shadow:0 8px 32px rgba(37,211,102,.35);transition:transform .25s,box-shadow .25s,background .25s}
+    .btn-whatsapp:hover{background:#1ebe5d;transform:translateY(-3px);box-shadow:0 14px 40px rgba(37,211,102,.45)}
+    .btn-call{background:var(--sunflower);color:var(--bark);padding:.9rem 2rem;border-radius:50px;text-decoration:none;font-weight:600;font-size:1rem;display:inline-flex;align-items:center;gap:.6rem;box-shadow:0 8px 32px rgba(232,160,32,.35);transition:transform .25s,box-shadow .25s,filter .25s}
+    .btn-call:hover{filter:brightness(1.1);transform:translateY(-3px)}
 
-    .hero-sub {
-      font-size: clamp(1rem, 2.5vw, 1.25rem);
-      color: var(--muted); max-width: 600px; margin: 1.4rem auto 2.4rem;
-      line-height: 1.7;
-      animation: fadeUp .9s .3s ease both;
-    }
+    /* FOOTER */
+    footer{background:#1e1208;color:rgba(237,229,208,.75);padding:4rem 5% 2rem}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+    .footer-brand .logo{color:var(--cream);margin-bottom:.3rem;display:inline-flex}
+    .footer-brand .logo-tagline{color:rgba(122,173,106,.8);padding-left:2rem;margin-bottom:.8rem;display:block}
+    .footer-brand p{font-size:.9rem;line-height:1.7;max-width:260px}
+    .footer-col h4{font-family:'Playfair Display',serif;color:var(--cream);font-size:1rem;margin-bottom:1rem}
+    .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.5rem}
+    .footer-col ul li a{color:rgba(237,229,208,.65);text-decoration:none;font-size:.9rem;transition:color .2s}
+    .footer-col ul li a:hover{color:var(--sage)}
+    .footer-contact p{font-size:.9rem;margin-bottom:.6rem;display:flex;align-items:center;gap:.5rem}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-size:.82rem}
+    .footer-bottom a{color:var(--sage);text-decoration:none}
 
-    .hero-actions {
-      display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
-      animation: fadeUp .9s .45s ease both;
-    }
+    /* FLOAT BUTTONS */
+    .float-btns{position:fixed;bottom:2rem;right:1.5rem;z-index:200;display:flex;flex-direction:column;gap:.85rem;align-items:flex-end}
+    .float-btn{display:flex;align-items:center;gap:.6rem;border-radius:50px;padding:.75rem 1.4rem;font-weight:600;font-size:.9rem;text-decoration:none;box-shadow:0 6px 28px rgba(0,0,0,.2);transition:transform .25s,box-shadow .25s;white-space:nowrap}
+    .float-btn:hover{transform:scale(1.05) translateY(-2px);box-shadow:0 12px 36px rgba(0,0,0,.28)}
+    .float-wa{background:#25D366;color:var(--white)}
+    .float-call{background:var(--sunflower);color:var(--bark)}
+    .float-icon{font-size:1.3rem;display:flex;align-items:center}
 
-    .btn-primary {
-      background: var(--leaf); color: var(--white);
-      padding: .9rem 2.2rem; border-radius: 50px; border: none;
-      font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 500;
-      cursor: pointer; text-decoration: none;
-      display: inline-flex; align-items: center; gap: .5rem;
-      box-shadow: 0 8px 32px rgba(74,140,63,.35);
-      transition: transform .25s, box-shadow .25s, background .25s;
-    }
-    .btn-primary:hover { background: var(--moss); transform: translateY(-3px); box-shadow: 0 14px 40px rgba(74,140,63,.45); }
+    @keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
 
-    .btn-outline {
-      background: transparent; color: var(--bark);
-      padding: .9rem 2.2rem; border-radius: 50px;
-      border: 2px solid var(--bark);
-      font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 500;
-      cursor: pointer; text-decoration: none;
-      display: inline-flex; align-items: center; gap: .5rem;
-      transition: background .25s, color .25s, transform .25s;
+    /* RESPONSIVE */
+    @media(max-width:1024px){
+      .why-grid{grid-template-columns:repeat(2,1fr)}
+      .why-card.big{grid-column:span 2}
+      .steps-grid{grid-template-columns:repeat(2,1fr)}
+      .steps-grid .step:not(:last-child)::after{display:none}
+      .testi-grid{grid-template-columns:repeat(2,1fr)}
+      .footer-grid{grid-template-columns:1fr 1fr}
     }
-    .btn-outline:hover { background: var(--bark); color: var(--white); transform: translateY(-3px); }
-
-    .hero-stats {
-      display: flex; gap: 3rem; justify-content: center; margin-top: 4rem; flex-wrap: wrap;
-      animation: fadeUp .9s .6s ease both;
+    @media(max-width:768px){
+      .nav-links{display:none;flex-direction:column;gap:0}
+      .nav-links.open{display:flex;position:fixed;inset:0;top:0;background:var(--cream);padding:5rem 2rem 2rem;align-items:center;justify-content:center;gap:2rem;z-index:99}
+      .nav-links.open a{font-size:1.3rem}
+      .hamburger{display:flex;position:relative;z-index:101}
+      .why-grid,.steps-grid,.testi-grid,.footer-grid{grid-template-columns:1fr}
+      .why-card.big{grid-column:span 1}
+      .hero-stats{gap:1.8rem}
+      .float-btn span.label{display:none}
+      .float-btn{padding:.9rem;border-radius:50%}
+      .float-icon{font-size:1.5rem}
+      .veg-grid{grid-template-columns:repeat(auto-fill,minmax(130px,1fr))}
     }
-    .stat { text-align: center; }
-    .stat-num {
-      font-family: 'Playfair Display', serif; font-size: 2.4rem; font-weight: 900;
-      color: var(--bark); display: block;
-    }
-    .stat-label { font-size: .85rem; color: var(--muted); letter-spacing: .05em; text-transform: uppercase; }
-
-    /* scroll arrow */
-    .scroll-hint {
-      position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);
-      display: flex; flex-direction: column; align-items: center; gap: .4rem;
-      color: var(--muted); font-size: .75rem; letter-spacing: .1em; text-transform: uppercase;
-      animation: bounce 2s infinite;
-    }
-    .scroll-hint::after { content: '↓'; font-size: 1.2rem; }
-    @keyframes bounce { 0%,100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(6px); } }
-
-    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-       MARQUEE STRIP
-    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-    .marquee-strip {
-      background: var(--moss); color: var(--cream);
-      padding: .9rem 0; overflow: hidden;
-      font-family: 'Caveat', cursive; font-size: 1.3rem; font-weight: 500;
-    }
-    .marquee-track {
-      display: flex; gap: 0;
-      animation: marquee 28s linear infinite;
-      width: max-content;
-    }
-    .marquee-item { white-space: nowrap; padding: 0 2.5rem; display: flex; align-items: center; gap: .6rem; }
-    .marquee-item::after { content: '✦'; opacity: .5; }
-    @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-
-    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-       SECTION COMMON
-    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-    section { padding: 7rem 5%; }
-
-    .section-label {
-      font-size: .8rem; letter-spacing: .14em; text-transform: uppercase;
-      color: var(--leaf); font-weight: 500; margin-bottom: .8rem;
-      display: flex; align-items: center; gap: .5rem;
-    }
-    .section-label::before { content: ''; width: 28px; height: 2px; background: var(--leaf); display: inline-block; }
-
-    h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2rem, 5vw, 3.2rem);
-      font-weight: 900; line-height: 1.2; color: var(--bark);
-    }
-    h2 em { font-style: italic; color: var(--leaf); }
-
-    .section-desc { font-size: 1.05rem; color: var(--muted); line-height: 1.75; margin-top: .8rem; max-width: 540px; }
-
-    /* Reveal animation */
-    .reveal { opacity: 0; transform: translateY(40px); transition: opacity .8s ease, transform .8s ease; }
-    .reveal.visible { opacity: 1; transform: none; }
-    .reveal-delay-1 { transition-delay: .1s; }
-    .reveal-delay-2 { transition-delay: .2s; }
-    .reveal-delay-3 { transition-delay: .3s; }
-    .reveal-delay-4 { transition-delay: .4s; }
-
-    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-       WHY US – BENTO GRID
-    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-    .why { background: var(--parchment); }
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: auto auto;
-      gap: 1.2rem; margin-top: 3.5rem;
-    }
-    .why-card {
-      background: var(--cream); border-radius: var(--r);
-      padding: 2.2rem; position: relative; overflow: hidden;
-      border: 1px solid rgba(61,43,31,.08);
-      transition: transform .3s, box-shadow .3s;
-    }
-    .why-card:hover { transform: translateY(-6px); box-shadow: 0 20px 60px rgba(61,43,31,.12); }
-    .why-card.big { grid-column: span 2; background: var(--moss); color: var(--cream); }
-    .why-card.big .card-title, .why-card.big .card-body { color: var(--cream); }
-    .why-card.big .card-icon { color: var(--sage); }
-    .card-icon { font-size: 2.2rem; margin-bottom: 1rem; }
-    .card-title { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; color: var(--bark); margin-bottom: .5rem; }
-    .card-body { font-size: .95rem; color: var(--muted); line-height: 1.65; }
-    .card-accent {
-      position: absolute; bottom: -20px; right: -20px;
-      font-size: 6rem; opacity: .07; pointer-events: none;
-    }
-    .why-header { max-width: 500px; }
-
-    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-       PRODUCTS
-    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-    .products-header { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem; margin-bottom: 3rem; }
-
-    .product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, max-content));
-  gap: 1.5rem;
-  justify-content: center;
-}
-
-    .product-card {
-      background: var(--white); border-radius: var(--r);
-      overflow: hidden; border: 1px solid rgba(61,43,31,.07);
-      transition: transform .3s, box-shadow .3s;
-      cursor: pointer;
-    }
-    .product-card:hover { transform: translateY(-8px) scale(1.02); box-shadow: 0 24px 64px rgba(61,43,31,.15); }
-    .product-img {
-      height: 200px; display: flex; align-items: center; justify-content: center;
-      font-size: 5rem;
-      position: relative; overflow: hidden;
-    }
-    
-    .product-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.4s ease;
-    }
-
-    .product-img::before {
-      content: ''; position: absolute; inset: 0;
-      background: inherit; filter: blur(0px);
-      transition: filter .4s;
-    }
-    .product-card:hover .product-img::before { filter: blur(4px); }
-    .p1 { background: linear-gradient(135deg, #e8f5e1, #c8e6c0); }
-    .p2 { background: linear-gradient(135deg, #fff8e1, #ffe082); }
-    .p3 { background: linear-gradient(135deg, #fce4ec, #f48fb1); }
-    .p4 { background: linear-gradient(135deg, #e8f5e9, #a5d6a7); }
-    .p5 { background: linear-gradient(135deg, #fff3e0, #ffcc80); }
-    .p6 { background: linear-gradient(135deg, #f3e5f5, #ce93d8); }
-    .p7 { background: linear-gradient(135deg, #e0f7fa, #80deea); }
-    .p8 { background: linear-gradient(135deg, #fafafa, #e0e0e0); }
-    .product-info { padding: 1.2rem 1.4rem; }
-    .product-name { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--bark); }
-    .product-farmer { font-size: .8rem; color: var(--muted); margin: .2rem 0 .8rem; }
-    .product-footer { display: flex; justify-content: space-between; align-items: center; }
-    .product-price { font-weight: 600; color: var(--leaf); font-size: 1rem; }
-    .product-badge {
-      background: rgba(74,140,63,.12); color: var(--leaf);
-      font-size: .72rem; padding: .25rem .7rem; border-radius: 50px;
-      font-weight: 500; letter-spacing: .04em;
-    }
-    
-    .product-card:hover .product-img img {
-      transform: scale(1.08);
-    }
-
-
-    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-       HOW IT WORKS
-    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-    .how { background: var(--bark); color: var(--cream); position: relative; overflow: hidden; }
-    .how::before {
-      content: '';
-      position: absolute; top: -100px; right: -100px;
-      width: 500px; height: 500px; border-radius: 50%;
-      background: radial-gradient(circle, rgba(74,140,63,.3), transparent 70%);
-      pointer-events: none;
-    }
-    .how h2, .how .section-label { color: var(--cream); }
-    .how .section-label { color: var(--sage); }
-    .how .section-label::before { background: var(--sage); }
-    .steps-grid {
-      display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 4rem;
-    }
-    .step {
-      position: relative; padding: 2rem;
-      border: 1px solid rgba(255,255,255,.1); border-radius: var(--r);
-      background: rgba(255,255,255,.04);
-      transition: background .3s, border-color .3s;
-    }
-    .step:hover { background: rgba(255,255,255,.08); border-color: rgba(122,173,106,.4); }
-    .step-num {
-      font-family: 'Playfair Display', serif; font-size: 4rem; font-weight: 900;
-      color: rgba(255,255,255,.08); position: absolute; top: .5rem; right: 1rem;
-      line-height: 1;
-    }
-    .step-icon { font-size: 2rem; margin-bottom: 1rem; }
-    .step h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; color: var(--cream); margin-bottom: .5rem; }
-    .step p { font-size: .9rem; color: rgba(237,229,208,.7); line-height: 1.6; }
-
-    /* connector line */
-    .steps-grid .step:not(:last-child)::after {
-      content: '→';
-      position: absolute; top: 50%; right: -1.2rem;
-      transform: translateY(-50%);
-      color: rgba(122,173,106,.4); font-size: 1.4rem; z-index: 1;
-    }
-
-    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-       FARMER SPOTLIGHT
-    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-    .farmers { background: var(--cream); }
-    .farmers-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3.5rem;
-    }
-    .farmer-card {
-      border-radius: var(--r); overflow: hidden;
-      border: 1px solid rgba(61,43,31,.08);
-      background: var(--white);
-      transition: transform .3s, box-shadow .3s;
-    }
-    .farmer-card:hover { transform: translateY(-6px); box-shadow: 0 20px 60px rgba(61,43,31,.12); }
-    .farmer-img {
-      height: 180px; display: flex; align-items: center; justify-content: center;
-      font-size: 5rem; position: relative;
-    }
-    .f1 { background: linear-gradient(160deg, #c8e6c0, #81c784); }
-    .f2 { background: linear-gradient(160deg, #ffccbc, #ff8a65); }
-    .f3 { background: linear-gradient(160deg, #b3e5fc, #4fc3f7); }
-    .cert-badge {
-      position: absolute; top: .8rem; right: .8rem;
-      background: var(--leaf); color: var(--white);
-      font-size: .7rem; padding: .3rem .7rem; border-radius: 50px;
-      font-weight: 600; letter-spacing: .04em;
-    }
-    .farmer-info { padding: 1.5rem; }
-    .farmer-name { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; color: var(--bark); }
-    .farmer-loc { font-size: .82rem; color: var(--muted); margin: .2rem 0 .8rem; display: flex; align-items: center; gap: .3rem; }
-    .farmer-quote {
-      font-family: 'Caveat', cursive; font-size: 1.1rem; color: var(--moss);
-      border-left: 3px solid var(--sage); padding-left: .8rem; line-height: 1.5;
-    }
-
-    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-       TESTIMONIALS
-    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-    .testimonials { background: var(--parchment); }
-    .testi-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3.5rem;
-    }
-    .testi-card {
-      background: var(--cream); border-radius: var(--r);
-      padding: 2rem; border: 1px solid rgba(61,43,31,.08);
-      position: relative; transition: transform .3s;
-    }
-    .testi-card:hover { transform: translateY(-4px); }
-    .testi-quote-mark {
-      font-family: 'Playfair Display', serif; font-size: 5rem;
-      color: rgba(74,140,63,.15); position: absolute; top: .5rem; left: 1.2rem;
-      line-height: 1;
-    }
-    .testi-text { font-size: 1rem; color: var(--text); line-height: 1.7; margin-bottom: 1.4rem; position: relative; z-index: 1; }
-    .testi-stars { color: var(--sunflower); font-size: 1rem; margin-bottom: .4rem; }
-    .testi-author { display: flex; align-items: center; gap: .8rem; }
-    .testi-avatar { width: 42px; height: 42px; border-radius: 50%; background: var(--sage); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0; }
-    .testi-name { font-weight: 600; font-size: .95rem; color: var(--bark); }
-    .testi-role { font-size: .8rem; color: var(--muted); }
-
-    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-       CTA BANNER
-    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-    .cta-banner {
-      background: var(--bark); color: var(--cream);
-      text-align: center; padding: 6rem 5%;
-      position: relative; overflow: hidden;
-    }
-    .cta-banner::before {
-      content: '';
-      position: absolute; top: -150px; left: 50%; transform: translateX(-50%);
-      width: 700px; height: 700px; border-radius: 50%;
-      background: radial-gradient(circle, rgba(74,140,63,.25), transparent 65%);
-    }
-    .cta-banner h2 { color: var(--cream); margin-bottom: 1rem; position: relative; }
-    .cta-banner p { color: rgba(237,229,208,.75); max-width: 480px; margin: 0 auto 2.5rem; line-height: 1.7; position: relative; }
-    .cta-actions { display: flex; justify-content: center; gap: 1.2rem; flex-wrap: wrap; position: relative; }
-
-    .btn-whatsapp {
-      background: #25D366; color: var(--white);
-      padding: .9rem 2rem; border-radius: 50px;
-      text-decoration: none; font-weight: 600; font-size: 1rem;
-      display: inline-flex; align-items: center; gap: .6rem;
-      box-shadow: 0 8px 32px rgba(37,211,102,.35);
-      transition: transform .25s, box-shadow .25s, background .25s;
-    }
-    .btn-whatsapp:hover { background: #1ebe5d; transform: translateY(-3px); box-shadow: 0 14px 40px rgba(37,211,102,.45); }
-
-    .btn-call {
-      background: var(--sunflower); color: var(--bark);
-      padding: .9rem 2rem; border-radius: 50px;
-      text-decoration: none; font-weight: 600; font-size: 1rem;
-      display: inline-flex; align-items: center; gap: .6rem;
-      box-shadow: 0 8px 32px rgba(232,160,32,.35);
-      transition: transform .25s, box-shadow .25s, filter .25s;
-    }
-    .btn-call:hover { filter: brightness(1.1); transform: translateY(-3px); box-shadow: 0 14px 40px rgba(232,160,32,.45); }
-
-    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-       FOOTER
-    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-    footer {
-      background: #1e1208; color: rgba(237,229,208,.75);
-      padding: 4rem 5% 2rem;
-    }
-    .footer-grid {
-      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem;
-    }
-    .footer-brand .logo { color: var(--cream); margin-bottom: 1rem; display: inline-flex; }
-    .footer-brand p { font-size: .9rem; line-height: 1.7; max-width: 260px; }
-    .footer-col h4 { font-family: 'Playfair Display', serif; color: var(--cream); font-size: 1rem; margin-bottom: 1rem; }
-    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: .5rem; }
-    .footer-col ul li a { color: rgba(237,229,208,.65); text-decoration: none; font-size: .9rem; transition: color .2s; }
-    .footer-col ul li a:hover { color: var(--sage); }
-    .footer-contact p { font-size: .9rem; margin-bottom: .6rem; display: flex; align-items: center; gap: .5rem; }
-    .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,.08); padding-top: 1.5rem;
-      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
-      font-size: .82rem;
-    }
-    .footer-bottom a { color: var(--sage); text-decoration: none; }
-
-    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-       FLOATING BUTTONS
-    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-    .float-btns {
-      position: fixed; bottom: 2rem; right: 1.5rem; z-index: 200;
-      display: flex; flex-direction: column; gap: .85rem; align-items: flex-end;
-    }
-    .float-btn {
-      display: flex; align-items: center; gap: .6rem;
-      border-radius: 50px; padding: .75rem 1.4rem;
-      font-weight: 600; font-size: .9rem; text-decoration: none;
-      box-shadow: 0 6px 28px rgba(0,0,0,.2);
-      transition: transform .25s, box-shadow .25s;
-      white-space: nowrap;
-    }
-    .float-btn:hover { transform: scale(1.05) translateY(-2px); box-shadow: 0 12px 36px rgba(0,0,0,.28); }
-    .float-wa { background: #25D366; color: var(--white); }
-    .float-call { background: var(--sunflower); color: var(--bark); }
-    .float-icon { font-size: 1.3rem; }
-
-    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-       ANIMATIONS
-    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to   { opacity: 1; transform: none; }
-    }
-
-    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-       RESPONSIVE
-    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-    @media (max-width: 1024px) {
-      .why-grid { grid-template-columns: repeat(2, 1fr); }
-      .why-card.big { grid-column: span 2; }
-      .steps-grid { grid-template-columns: repeat(2, 1fr); }
-      .steps-grid .step:not(:last-child)::after { display: none; }
-      .farmers-grid { grid-template-columns: repeat(2, 1fr); }
-      .testi-grid { grid-template-columns: repeat(2, 1fr); }
-      .footer-grid { grid-template-columns: 1fr 1fr; }
-    }
-    @media (max-width: 768px) {
-      .nav-links { display: none; flex-direction: column; gap: 0; }
-      .nav-links.open {
-        display: flex; position: fixed; inset: 0; top: 0;
-        background: var(--cream); padding: 5rem 2rem 2rem;
-        align-items: center; justify-content: center; gap: 2rem;
-        z-index: 99;
-      }
-      .nav-links.open a { font-size: 1.3rem; }
-      .hamburger { display: flex; position: relative; z-index: 101; }
-      .why-grid { grid-template-columns: 1fr; }
-      .why-card.big { grid-column: span 1; }
-      .steps-grid { grid-template-columns: 1fr; }
-      .farmers-grid { grid-template-columns: 1fr; }
-      .testi-grid { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr; }
-      .hero-stats { gap: 1.8rem; }
-      .float-btn span.label { display: none; }
-      .float-btn { padding: .9rem; border-radius: 50%; }
-      .float-icon { font-size: 1.5rem; }
-    }
-    @media (max-width: 480px) {
-      .cert-grid { flex-direction: column; }
+    @media(max-width:480px){
+      .modal-body{padding:1.2rem}
+      .modal-header{padding:1.2rem 1.4rem}
+      .veg-grid{grid-template-columns:repeat(auto-fill,minmax(110px,1fr))}
     }
   </style>
 </head>
 <body>
 
-<!-- ─── NAV ─── -->
+<!-- NAV -->
 <nav id="navbar">
-  <a href="#" class="logo"><span class="logo-leaf">🌿</span> Greenlyfe Organics</a>
+  <a href="#" class="logo-wrap">
+    <span class="logo"><span>🌿</span> Greenlyfe Organics</span>
+    <span class="logo-tagline">Nature's purity delivered fresh</span>
+  </a>
   <ul class="nav-links" id="navLinks">
     <li><a href="#why">Why Us</a></li>
     <li><a href="#products">Products</a></li>
@@ -605,12 +255,27 @@
     <li><a href="#testimonials">Reviews</a></li>
     <li><a href="#contact" class="nav-cta">Order Now</a></li>
   </ul>
-  <div class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
     <span></span><span></span><span></span>
-  </div>
+  </button>
 </nav>
 
-<!-- ─── HERO ─── -->
+<!-- VEGETABLES MODAL -->
+<div class="modal-overlay" id="vegModal" role="dialog" aria-modal="true" aria-labelledby="vegModalTitle">
+  <div class="modal">
+    <div class="modal-header">
+      <h3 id="vegModalTitle">🥦 Fresh <em>Vegetables</em></h3>
+      <button class="modal-close" onclick="closeVegModal()" aria-label="Close">✕</button>
+    </div>
+    <div class="modal-body">
+      <input class="veg-search" type="search" id="vegSearch" placeholder="Search vegetables..." oninput="filterVeg(this.value)" />
+      <div id="vegContent"></div>
+      <p class="veg-footer-note">All prices per kg / as indicated · <a href="https://wa.me/918308311348?text=Hi!%20I%20want%20to%20order%20vegetables" target="_blank" rel="noopener">📲 WhatsApp to order</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- HERO -->
 <section class="hero" id="home">
   <div class="blob blob-1"></div>
   <div class="blob blob-2"></div>
@@ -618,14 +283,10 @@
   <div class="hero-inner">
     <div class="hero-badge"><span>🏅</span> Certified Organic Farmers · Pune</div>
     <h1>From <em>Certified</em><br>Farm to Your<br>Table</h1>
-    <p class="hero-sub">
-      No middlemen. No chemicals. Just the freshest, certified organic vegetables, fruits & grains — grown by verified local farmers and delivered directly to your home in Pune.
-    </p>
+    <p class="hero-sub">No middlemen. No chemicals. Just the freshest, certified organic vegetables, fruits & grains — grown by verified local farmers and delivered directly to your home in Pune.</p>
     <div class="hero-actions">
-      <a href="https://wa.me/918308311348?text=Hi%20Greenlyfe Organics!%20I%20want%20to%20order%20organic%20produce" class="btn-primary" target="_blank" rel="noopener">
-        <span>💬</span> Order on WhatsApp
-      </a>
-      <a href="#products" class="btn-outline"><span>🌾</span> Browse Products</a>
+      <a href="https://wa.me/918308311348?text=Hi%20Greenlyfe%20Organics!%20I%20want%20to%20order%20organic%20produce" class="btn-primary" target="_blank" rel="noopener">💬 Order on WhatsApp</a>
+      <a href="#products" class="btn-outline">🌾 Browse Products</a>
     </div>
     <div class="hero-stats">
       <div class="stat"><span class="stat-num" data-target="48">0</span><span class="stat-label">Certified Farmers</span></div>
@@ -637,9 +298,9 @@
   <div class="scroll-hint">Scroll</div>
 </section>
 
-<!-- ─── MARQUEE ─── -->
+<!-- MARQUEE -->
 <div class="marquee-strip" aria-hidden="true">
-  <div class="marquee-track" id="marqueeTrack">
+  <div class="marquee-track">
     <span class="marquee-item">🥦 Certified Organic</span>
     <span class="marquee-item">🌿 No Pesticides</span>
     <span class="marquee-item">🚚 Same-Day Delivery in Pune</span>
@@ -655,12 +316,12 @@
   </div>
 </div>
 
-<!-- ─── WHY US ─── -->
+<!-- WHY US -->
 <section class="why" id="why">
   <div class="why-header reveal">
     <p class="section-label">Why Greenlyfe Organics</p>
     <h2>Pure Food,<br><em>Real Farmers</em></h2>
-    <p class="section-desc">Every product on our platform is grown without synthetic chemicals, verified by government-approved certifying bodies, and sourced directly — so you always know exactly who grew your food.</p>
+    <p class="section-desc">Every product is grown without synthetic chemicals, verified by government-approved certifying bodies, and sourced directly — so you always know exactly who grew your food.</p>
   </div>
   <div class="why-grid">
     <div class="why-card big reveal reveal-delay-1">
@@ -696,7 +357,7 @@
   </div>
 </section>
 
-<!-- ─── PRODUCTS ─── -->
+<!-- PRODUCTS -->
 <section id="products">
   <div class="products-header">
     <div class="reveal">
@@ -706,79 +367,64 @@
     <a href="https://wa.me/918308311348?text=Full%20product%20list%20please!" class="btn-primary reveal" target="_blank" rel="noopener" style="align-self:flex-end">View All →</a>
   </div>
   <div class="product-grid">
-
-  <div class="product-card reveal">
-    <div class="product-img p1">
-<div class="product-img">
-  <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999" alt="Fresh Vegetables">
-</div>
-</div>
-    <div class="product-info">
-      <div class="product-name">Fresh Vegetables</div>
-      <div class="product-farmer">Farm fresh seasonal greens</div>
-      <div class="product-footer">
-        <span class="product-badge">✓ Fresh</span>
-        <span class="product-badge">✓ Organic</span>
+    <div class="product-card reveal" onclick="openVegModal()">
+      <div class="product-img p1">
+        <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&auto=format&fit=crop" alt="Fresh Vegetables" loading="lazy" />
+      </div>
+      <div class="product-info">
+        <div class="product-name">Fresh Vegetables</div>
+        <div class="product-farmer">Farm fresh seasonal greens</div>
+        <div class="product-footer">
+          <span class="product-badge">✓ Fresh</span>
+          <span class="product-badge">✓ Organic</span>
+        </div>
+      </div>
+    </div>
+    <div class="product-card reveal reveal-delay-1">
+      <div class="product-img p2">
+        <img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=600&auto=format&fit=crop" alt="Organic Fruits" loading="lazy" />
+      </div>
+      <div class="product-info">
+        <div class="product-name">Organic Fruits</div>
+        <div class="product-farmer">Seasonal & naturally ripened</div>
+        <div class="product-footer">
+          <span class="product-badge">✓ Fresh</span>
+          <span class="product-badge">✓ Organic</span>
+        </div>
+      </div>
+    </div>
+    <div class="product-card reveal reveal-delay-2">
+      <div class="product-img p3">
+        <img src="https://images.unsplash.com/photo-1550583724-b2692b85b150?w=600&auto=format&fit=crop" alt="Fresh Milk" loading="lazy" />
+      </div>
+      <div class="product-info">
+        <div class="product-name">Fresh Milk</div>
+        <div class="product-farmer">From grass-fed desi cows</div>
+        <div class="product-footer">
+          <span class="product-badge">✓ Fresh</span>
+          <span class="product-badge">✓ Pure</span>
+        </div>
+      </div>
+    </div>
+    <div class="product-card reveal reveal-delay-3">
+      <div class="product-img p4">
+        <img src="https://images.unsplash.com/photo-1506976785307-8732e854ad03?w=600&auto=format&fit=crop" alt="Farm Eggs" loading="lazy" />
+      </div>
+      <div class="product-info">
+        <div class="product-name">Farm Eggs</div>
+        <div class="product-farmer">Free-range & chemical-free</div>
+        <div class="product-footer">
+          <span class="product-badge">✓ Fresh</span>
+          <span class="product-badge">✓ Desi</span>
+        </div>
       </div>
     </div>
   </div>
-
-  <div class="product-card reveal reveal-delay-1">
-    <div class="product-img p2">
-<div class="product-img">
-  <img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf" alt="Fruits">
-</div>
-</div>
-    <div class="product-info">
-      <div class="product-name">Organic Fruits</div>
-      <div class="product-farmer">Seasonal & naturally ripened</div>
-      <div class="product-footer">
-        <span class="product-badge">✓ Fresh</span>
-        <span class="product-badge">✓ Organic</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="product-card reveal reveal-delay-2">
-    <div class="product-img p3">
-<div class="product-img">
-  <img src="https://images.unsplash.com/photo-1550583724-b2692b85b150?q=80&w=1200&auto=format&fit=crop" alt="Milk">
-</div>
-</div>
-    <div class="product-info">
-      <div class="product-name">Fresh Milk</div>
-      <div class="product-farmer">From grass-fed desi cows</div>
-      <div class="product-footer">
-        <span class="product-badge">✓ Fresh</span>
-        <span class="product-badge">✓ Pure</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="product-card reveal reveal-delay-3">
-    <div class="product-img p4">
-<div class="product-img">
-  <img src="https://images.unsplash.com/photo-1506976785307-8732e854ad03?q=80&w=1200&auto=format&fit=crop" alt="Eggs">
-</div>
-
-</div>
-    <div class="product-info">
-      <div class="product-name">Farm Eggs</div>
-      <div class="product-farmer">Free-range & chemical-free</div>
-      <div class="product-footer">
-        <span class="product-badge">✓ Fresh</span>
-        <span class="product-badge">✓ Desi</span>
-      </div>
-    </div>
-  </div>
-
-</div>
-
 </section>
 
-<!-- ─── HOW IT WORKS ─── -->
+<!-- HOW IT WORKS -->
 <section class="how" id="how">
-  <div style="text-align:center; max-width:580px; margin:0 auto;" class="reveal">
+  <div style="text-align:center;max-width:580px;margin:0 auto" class="reveal">
     <p class="section-label">Simple Process</p>
     <h2>Farm to Table<br>in <em>4 Easy Steps</em></h2>
   </div>
@@ -810,9 +456,9 @@
   </div>
 </section>
 
-<!-- ─── TESTIMONIALS ─── -->
+<!-- TESTIMONIALS -->
 <section class="testimonials" id="testimonials">
-  <div style="text-align:center;" class="reveal">
+  <div style="text-align:center" class="reveal">
     <p class="section-label">Customer Love</p>
     <h2>What Pune Families<br><em>Are Saying</em></h2>
   </div>
@@ -856,14 +502,12 @@
   </div>
 </section>
 
-
-
-<!-- ─── CTA ─── -->
+<!-- CTA -->
 <section class="cta-banner" id="contact">
   <h2>Ready to Eat <em style="color:var(--sage)">Pure?</em></h2>
   <p>Join 1,200+ Pune families who've made the switch to certified organic. Order your first box today — it's just a WhatsApp away.</p>
   <div class="cta-actions">
-    <a href="https://wa.me/918308311348?text=Hi%20Greenlyfe Organics!%20I'd%20like%20to%20place%20an%20order" class="btn-whatsapp" target="_blank" rel="noopener">
+    <a href="https://wa.me/918308311348?text=Hi%20Greenlyfe%20Organics!%20I'd%20like%20to%20place%20an%20order" class="btn-whatsapp" target="_blank" rel="noopener">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.94 11.94 0 0012.02 0C5.38 0 0 5.38 0 12c0 2.11.55 4.17 1.6 5.98L0 24l6.2-1.56A11.97 11.97 0 0012.02 24C18.65 24 24 18.62 24 12c0-3.2-1.25-6.21-3.48-8.52zm-8.5 18.35a9.95 9.95 0 01-5.06-1.38l-.36-.22-3.68.93.98-3.57-.24-.37A9.93 9.93 0 012.04 12C2.04 6.5 6.51 2.04 12.02 2.04A9.95 9.95 0 0121.96 12c0 5.5-4.47 9.83-9.94 9.83zm5.43-7.42c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.95 1.17-.18.2-.35.22-.65.07a8.17 8.17 0 01-2.4-1.48 9.04 9.04 0 01-1.66-2.07c-.18-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.68-1.63-.93-2.23-.24-.58-.5-.5-.68-.51h-.58c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.14.2 2.1 3.2 5.1 4.49.71.3 1.27.49 1.7.63.72.23 1.37.2 1.89.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/></svg>
       WhatsApp Us
     </a>
@@ -874,11 +518,14 @@
   </div>
 </section>
 
-<!-- ─── FOOTER ─── -->
+<!-- FOOTER -->
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
-      <a href="#" class="logo"><span class="logo-leaf">🌿</span> Greenlyfe Organics</a>
+      <a href="#" class="logo-wrap">
+        <span class="logo" style="color:var(--cream)">🌿 Greenlyfe Organics</span>
+        <span class="logo-tagline">Nature's purity delivered fresh</span>
+      </a>
       <p>Connecting certified organic farmers with health-conscious families in Pune. Pure food, honest farming, direct delivery.</p>
     </div>
     <div class="footer-col">
@@ -893,7 +540,7 @@
     <div class="footer-col">
       <h4>Products</h4>
       <ul>
-        <li><a href="#">Vegetables</a></li>
+        <li><a href="#" onclick="openVegModal();return false">Vegetables</a></li>
         <li><a href="#">Fruits</a></li>
         <li><a href="#">Grains & Pulses</a></li>
         <li><a href="#">Dairy</a></li>
@@ -902,110 +549,173 @@
     </div>
     <div class="footer-col footer-contact">
       <h4>Contact Us</h4>
-      <p>📞 <a href="tel:+918308311348" style="color:var(--sage); text-decoration:none">+91918308311348</a></p>
-      <p>💬 <a href="https://wa.me/918308311348" style="color:var(--sage); text-decoration:none" target="_blank" rel="noopener">WhatsApp Order</a></p>
-      <p>📧 <a href="mailto:greenlyforganic@gmail.com" style="color:var(--sage); text-decoration:none">greenlyforganic@gmail.com</a></p>
+      <p>📞 <a href="tel:+918308311348" style="color:var(--sage);text-decoration:none">+91 8308311348</a></p>
+      <p>💬 <a href="https://wa.me/918308311348" style="color:var(--sage);text-decoration:none" target="_blank" rel="noopener">WhatsApp Order</a></p>
+      <p>📧 <a href="mailto:greenlyforganic@gmail.com" style="color:var(--sage);text-decoration:none">greenlyforganic@gmail.com</a></p>
       <p>📍 Pune, Maharashtra, India</p>
       <p>🕐 Mon–Sun: 7 AM – 8 PM</p>
     </div>
   </div>
   <div class="footer-bottom">
-  <span>© 2026 Greenlyfe Organics. All rights reserved.</span>
-  <span>Made with 🌿 for Pune | <a href="#">Privacy</a> · <a href="#">Terms</a></span>
-  <span style="font-size:.82rem; color:rgba(237,229,208,.55);">
-    Designed & Built by 
-    <strong style="color:var(--sage);">Dnyaneshwar Sudke</strong> · 
-    <a href="tel:+919763656728" style="color:var(--sage); text-decoration:none;">📞 9763656728</a> · 
-    <a href="mailto:dnyan2207@gmail.com" style="color:var(--sage); text-decoration:none;">✉️ dnyan2207@gmail.com</a>
-  </span>
-</div>
+    <span>© 2026 Greenlyfe Organics. All rights reserved.</span>
+    <span>Made with 🌿 for Pune | <a href="#">Privacy</a> · <a href="#">Terms</a></span>
+    <span style="font-size:.82rem;color:rgba(237,229,208,.55)">Designed & Built by <strong style="color:var(--sage)">Dnyaneshwar Sudke</strong> · <a href="tel:+919763656728" style="color:var(--sage);text-decoration:none">📞 9763656728</a> · <a href="mailto:dnyan2207@gmail.com" style="color:var(--sage);text-decoration:none">✉️ dnyan2207@gmail.com</a></span>
+  </div>
 </footer>
 
-<!-- ─── FLOATING BUTTONS ─── -->
+<!-- FLOATING BUTTONS -->
 <div class="float-btns">
-  <a href="https://wa.me/918308311348?text=Hi%20Greenlyfe Organics!%20I%20want%20to%20order" class="float-btn float-wa" target="_blank" rel="noopener" aria-label="WhatsApp">
-    <span class="float-icon">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.94 11.94 0 0012.02 0C5.38 0 0 5.38 0 12c0 2.11.55 4.17 1.6 5.98L0 24l6.2-1.56A11.97 11.97 0 0012.02 24C18.65 24 24 18.62 24 12c0-3.2-1.25-6.21-3.48-8.52zm-8.5 18.35a9.95 9.95 0 01-5.06-1.38l-.36-.22-3.68.93.98-3.57-.24-.37A9.93 9.93 0 012.04 12C2.04 6.5 6.51 2.04 12.02 2.04A9.95 9.95 0 0121.96 12c0 5.5-4.47 9.83-9.94 9.83zm5.43-7.42c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.95 1.17-.18.2-.35.22-.65.07a8.17 8.17 0 01-2.4-1.48 9.04 9.04 0 01-1.66-2.07c-.18-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.68-1.63-.93-2.23-.24-.58-.5-.5-.68-.51h-.58c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.14.2 2.1 3.2 5.1 4.49.71.3 1.27.49 1.7.63.72.23 1.37.2 1.89.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/></svg>
-    </span>
+  <a href="https://wa.me/918308311348?text=Hi%20Greenlyfe%20Organics!%20I%20want%20to%20order" class="float-btn float-wa" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <span class="float-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.94 11.94 0 0012.02 0C5.38 0 0 5.38 0 12c0 2.11.55 4.17 1.6 5.98L0 24l6.2-1.56A11.97 11.97 0 0012.02 24C18.65 24 24 18.62 24 12c0-3.2-1.25-6.21-3.48-8.52zm-8.5 18.35a9.95 9.95 0 01-5.06-1.38l-.36-.22-3.68.93.98-3.57-.24-.37A9.93 9.93 0 012.04 12C2.04 6.5 6.51 2.04 12.02 2.04A9.95 9.95 0 0121.96 12c0 5.5-4.47 9.83-9.94 9.83zm5.43-7.42c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.95 1.17-.18.2-.35.22-.65.07a8.17 8.17 0 01-2.4-1.48 9.04 9.04 0 01-1.66-2.07c-.18-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.68-1.63-.93-2.23-.24-.58-.5-.5-.68-.51h-.58c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.14.2 2.1 3.2 5.1 4.49.71.3 1.27.49 1.7.63.72.23 1.37.2 1.89.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/></svg></span>
     <span class="label">WhatsApp Order</span>
   </a>
   <a href="tel:+918308311348" class="float-btn float-call" aria-label="Call">
-    <span class="float-icon">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg>
-    </span>
+    <span class="float-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg></span>
     <span class="label">Call Us</span>
   </a>
 </div>
 
 <script>
-  /* ── Navbar scroll ── */
-  const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 60);
-  });
+// ── Vegetable Data ──
+const VEG_DATA = [
+  { cat:"Leafy Greens", items:[
+    {e:"🥬",n:"Spinach",h:"पालक",p:"₹40/kg"},
+    {e:"🥬",n:"Fenugreek (Methi)",h:"मेथी",p:"₹30/bunch"},
+    {e:"🥬",n:"Coriander",h:"धणे",p:"₹20/bunch"},
+    {e:"🥬",n:"Amaranth (Chawli)",h:"चवळी भाजी",p:"₹25/bunch"},
+    {e:"🌿",n:"Mint",h:"पुदिना",p:"₹15/bunch"},
+    {e:"🥬",n:"Curry Leaves",h:"कढीपत्ता",p:"₹10/bunch"},
+  ]},
+  { cat:"Root Vegetables", items:[
+    {e:"🥕",n:"Carrot",h:"गाजर",p:"₹50/kg"},
+    {e:"🥔",n:"Potato",h:"बटाटा",p:"₹35/kg"},
+    {e:"🧅",n:"Onion",h:"कांदा",p:"₹40/kg"},
+    {e:"🧄",n:"Garlic",h:"लसूण",p:"₹120/kg"},
+    {e:"🟤",n:"Beetroot",h:"बीट",p:"₹45/kg"},
+    {e:"🟡",n:"Turmeric (Fresh)",h:"हळद",p:"₹80/kg"},
+    {e:"🟡",n:"Ginger",h:"आलं",p:"₹90/kg"},
+    {e:"🟣",n:"Radish",h:"मुळा",p:"₹30/kg"},
+  ]},
+  { cat:"Gourds & Pods", items:[
+    {e:"🥒",n:"Cucumber",h:"काकडी",p:"₹40/kg"},
+    {e:"🥒",n:"Bottle Gourd",h:"दुधी भोपळा",p:"₹30/kg"},
+    {e:"🟢",n:"Bitter Gourd",h:"करले",p:"₹60/kg"},
+    {e:"🟢",n:"Ridge Gourd",h:"दोडकी",p:"₹35/kg"},
+    {e:"🟢",n:"Snake Gourd",h:"पडवळ",p:"₹40/kg"},
+    {e:"🫘",n:"Green Beans (French)",h:"फरसबी",p:"₹70/kg"},
+    {e:"🫛",n:"Green Peas",h:"वाटाणे",p:"₹80/kg"},
+    {e:"🟢",n:"Cluster Beans (Gavar)",h:"गवार",p:"₹55/kg"},
+  ]},
+  { cat:"Fruiting Vegetables", items:[
+    {e:"🍅",n:"Tomato",h:"टोमॅटो",p:"₹45/kg"},
+    {e:"🫑",n:"Capsicum (Green)",h:"सिमला मिरची",p:"₹80/kg"},
+    {e:"🌶️",n:"Green Chilli",h:"हिरवी मिरची",p:"₹60/kg"},
+    {e:"🍆",n:"Brinjal",h:"वांगं",p:"₹35/kg"},
+    {e:"🎃",n:"Pumpkin",h:"भोपळा",p:"₹30/kg"},
+    {e:"🌽",n:"Sweet Corn",h:"मका",p:"₹25/cob"},
+    {e:"🥦",n:"Broccoli",h:"ब्रोकोली",p:"₹100/kg"},
+    {e:"🥬",n:"Cabbage",h:"कोबी",p:"₹30/kg"},
+    {e:"🥦",n:"Cauliflower",h:"फुलकोबी",p:"₹40/kg"},
+    {e:"🌰",n:"Lady Finger (Bhindi)",h:"भेंडी",p:"₹50/kg"},
+  ]},
+  { cat:"Seasonal Specials", items:[
+    {e:"🟢",n:"Drumstick (Moringa)",h:"शेवगा",p:"₹60/kg"},
+    {e:"🌾",n:"Colocasia (Arbi)",h:"आळू",p:"₹50/kg"},
+    {e:"🟣",n:"Purple Yam (Kand)",h:"कांद",p:"₹70/kg"},
+    {e:"🟤",n:"Sweet Potato",h:"रताळे",p:"₹55/kg"},
+  ]}
+];
 
-  /* ── Mobile menu ── */
-  function toggleMenu() {
-    document.getElementById('navLinks').classList.toggle('open');
+function renderVeg(data){
+  const c = document.getElementById('vegContent');
+  if(!data.length){ c.innerHTML='<p class="no-results">No vegetables found. Try a different search!</p>'; return; }
+  c.innerHTML = data.map(cat=>`
+    <p class="veg-cat-label">${cat.cat}</p>
+    <div class="veg-grid">
+      ${cat.items.map(v=>`
+        <div class="veg-item" onclick="orderVeg('${v.n}')">
+          <span class="veg-emoji">${v.e}</span>
+          <span class="veg-name">${v.n}</span>
+          <span class="veg-hindi">${v.h}</span>
+          <span class="veg-price">${v.p}</span>
+        </div>`).join('')}
+    </div>`).join('');
+}
+
+function filterVeg(q){
+  if(!q.trim()){ renderVeg(VEG_DATA); return; }
+  const lq = q.toLowerCase();
+  const filtered = VEG_DATA.map(cat=>({
+    ...cat,
+    items: cat.items.filter(v=>v.n.toLowerCase().includes(lq)||v.h.includes(lq))
+  })).filter(cat=>cat.items.length);
+  renderVeg(filtered);
+}
+
+function orderVeg(name){
+  window.open(`https://wa.me/918308311348?text=Hi%20Greenlyfe%20Organics!%20I%20want%20to%20order%20${encodeURIComponent(name)}`,'_blank','noopener');
+}
+
+function openVegModal(){
+  const m = document.getElementById('vegModal');
+  m.classList.add('open');
+  document.body.style.overflow='hidden';
+  document.getElementById('vegSearch').value='';
+  renderVeg(VEG_DATA);
+  setTimeout(()=>document.getElementById('vegSearch').focus(),400);
+}
+
+function closeVegModal(){
+  document.getElementById('vegModal').classList.remove('open');
+  document.body.style.overflow='';
+}
+
+document.getElementById('vegModal').addEventListener('click',function(e){
+  if(e.target===this) closeVegModal();
+});
+document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeVegModal(); });
+
+// ── Navbar scroll ──
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll',()=>navbar.classList.toggle('scrolled',scrollY>60),{passive:true});
+
+// ── Mobile menu ──
+function toggleMenu(){document.getElementById('navLinks').classList.toggle('open')}
+document.querySelectorAll('#navLinks a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('open')));
+
+// ── Reveal on scroll ──
+const observer = new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+// ── Counter animation ──
+function animateCounter(el){
+  const target=+el.dataset.target, duration=1800, start=performance.now();
+  function update(now){
+    const p=Math.min((now-start)/duration,1), ease=1-Math.pow(1-p,3);
+    el.textContent=Math.floor(ease*target)+(target>=10?'+':'');
+    if(p<1) requestAnimationFrame(update);
   }
-  document.querySelectorAll('#navLinks a').forEach(a => {
-    a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
+  requestAnimationFrame(update);
+}
+const counterObserver=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){animateCounter(e.target);counterObserver.unobserve(e.target)}}),{threshold:.5});
+document.querySelectorAll('[data-target]').forEach(el=>counterObserver.observe(el));
+
+// ── Blob parallax ──
+document.addEventListener('mousemove',e=>{
+  const dx=(e.clientX-innerWidth/2)/innerWidth, dy=(e.clientY-innerHeight/2)/innerHeight;
+  document.querySelectorAll('.blob').forEach((b,i)=>{const f=(i+1)*8;b.style.transform=`translate(${dx*f}px,${dy*f}px)`});
+},{passive:true});
+
+// ── Product card tilt ──
+document.querySelectorAll('.product-card').forEach(card=>{
+  card.addEventListener('mousemove',e=>{
+    const r=card.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+    card.style.transform=`perspective(600px) rotateY(${x*10}deg) rotateX(${-y*10}deg) translateY(-8px) scale(1.02)`;
   });
-
-  /* ── Reveal on scroll ── */
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
-  }, { threshold: 0.12 });
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-  /* ── Counter animation ── */
-  function animateCounter(el) {
-    const target = +el.dataset.target;
-    const duration = 1800;
-    const start = performance.now();
-    function update(now) {
-      const elapsed = now - start;
-      const progress = Math.min(elapsed / duration, 1);
-      const ease = 1 - Math.pow(1 - progress, 3);
-      el.textContent = Math.floor(ease * target) + (target >= 100 ? '+' : (target < 10 ? '' : '+'));
-      if (progress < 1) requestAnimationFrame(update);
-    }
-    requestAnimationFrame(update);
-  }
-
-  const counterObserver = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        animateCounter(e.target);
-        counterObserver.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.5 });
-  document.querySelectorAll('[data-target]').forEach(el => counterObserver.observe(el));
-
-  /* ── Parallax blobs ── */
-  document.addEventListener('mousemove', (e) => {
-    const { clientX: x, clientY: y } = e;
-    const cx = window.innerWidth / 2, cy = window.innerHeight / 2;
-    const dx = (x - cx) / cx, dy = (y - cy) / cy;
-    document.querySelectorAll('.blob').forEach((b, i) => {
-      const factor = (i + 1) * 8;
-      b.style.transform = `translate(${dx * factor}px, ${dy * factor}px)`;
-    });
-  });
-
-  /* ── Product card tilt ── */
-  document.querySelectorAll('.product-card').forEach(card => {
-    card.addEventListener('mousemove', (e) => {
-      const rect = card.getBoundingClientRect();
-      const x = (e.clientX - rect.left) / rect.width - .5;
-      const y = (e.clientY - rect.top) / rect.height - .5;
-      card.style.transform = `perspective(600px) rotateY(${x * 10}deg) rotateX(${-y * 10}deg) translateY(-8px) scale(1.02)`;
-    });
-    card.addEventListener('mouseleave', () => {
-      card.style.transform = '';
-    });
-  });
+  card.addEventListener('mouseleave',()=>card.style.transform='');
+});
 </script>
 </body>
 </html>
+HTMLEOF
+echo "Done"
