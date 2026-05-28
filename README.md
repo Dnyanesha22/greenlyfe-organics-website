@@ -1,1 +1,25 @@
-# greenlyf-organics-website
+# 🌿 Greenlyf Organics Website
+
+A modern responsive landing page for an organic farming business.
+
+## 🚀 Live Demo
+👉 https://yourusername.github.io/greenlyf-organics-website/
+
+## 💡 Features
+- Clean UI/UX design
+- Mobile responsive
+- Smooth animations
+- Modern CSS (gradients, glass effect)
+- SEO optimized meta tags
+- Interactive elements (hover, scroll, counters)
+
+## 🛠️ Tech Stack
+- HTML5
+- CSS3
+- JavaScript (Vanilla)
+
+## 📸 Screenshots
+(Add screenshots here)
+
+## 🎯 Purpose
+Built as a real-world business landing page to demonstrate frontend skills.
