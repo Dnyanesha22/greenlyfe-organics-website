@@ -5,23 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- SEO Meta Tags -->
-  <title>Greenlyf Organics – Certified Organic Farm Products Delivered in Pune</title>
-  <meta name="description" content="Greenlyf Organics connects you directly with certified organic farmers in and around Pune. Fresh, chemical-free vegetables, fruits & grains delivered to your door." />
+  <title>Greenlyfe Organics – Certified Organic Farm Products Delivered in Pune</title>
+  <meta name="description" content="Greenlyfe Organics connects you directly with certified organic farmers in and around Pune. Fresh, chemical-free vegetables, fruits & grains delivered to your door." />
   <meta name="keywords" content="organic farm Pune, certified organic vegetables Pune, farm to table Pune, organic food delivery Pune, fresh organic produce Pune, natural farming Pune" />
-  <meta name="author" content="Greenlyf Organics" />
+  <meta name="author" content="Greenlyfe Organics" />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://greenlyforganics.in/" />
+  <link rel="canonical" href="https://Greenlyfeorganics.in/" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Greenlyf Organics – Certified Organic Farm Products in Pune" />
+  <meta property="og:title" content="Greenlyfe Organics – Certified Organic Farm Products in Pune" />
   <meta property="og:description" content="Direct from certified organic farmers to your kitchen. No middlemen, no chemicals, just pure goodness." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://greenlyforganics.in/" />
-  <meta property="og:image" content="https://greenlyforganics.in/og-image.jpg" />
+  <meta property="og:url" content="https://Greenlyfeorganics.in/" />
+  <meta property="og:image" content="https://Greenlyfeorganics.in/og-image.jpg" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Greenlyf Organics – Organic Farm to Table in Pune" />
+  <meta name="twitter:title" content="Greenlyfe Organics – Organic Farm to Table in Pune" />
   <meta name="twitter:description" content="Certified organic produce, directly from farmer to your family in Pune." />
 
   <!-- Schema.org Structured Data -->
@@ -29,9 +29,9 @@
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "Greenlyf Organics",
+    "name": "Greenlyfe Organics",
     "description": "Certified organic farm products delivered directly from farmers to consumers in Pune.",
-    "url": "https://greenlyforganics.in",
+    "url": "https://Greenlyfeorganics.in",
     "telephone": "+9198308311348",
     "address": {
       "@type": "PostalAddress",
@@ -307,8 +307,11 @@
     .products-header { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem; margin-bottom: 3rem; }
 
     .product-grid {
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1.5rem;
-    }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, max-content));
+  gap: 1.5rem;
+  justify-content: center;
+}
 
     .product-card {
       background: var(--white); border-radius: var(--r);
@@ -322,6 +325,15 @@
       font-size: 5rem;
       position: relative; overflow: hidden;
     }
+    
+    .product-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
     .product-img::before {
       content: ''; position: absolute; inset: 0;
       background: inherit; filter: blur(0px);
@@ -346,6 +358,11 @@
       font-size: .72rem; padding: .25rem .7rem; border-radius: 50px;
       font-weight: 500; letter-spacing: .04em;
     }
+    
+    .product-card:hover .product-img img {
+      transform: scale(1.08);
+    }
+
 
     /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
        HOW IT WORKS
@@ -580,7 +597,7 @@
 
 <!-- ─── NAV ─── -->
 <nav id="navbar">
-  <a href="#" class="logo"><span class="logo-leaf">🌿</span> Greenlyf Organics</a>
+  <a href="#" class="logo"><span class="logo-leaf">🌿</span> Greenlyfe Organics</a>
   <ul class="nav-links" id="navLinks">
     <li><a href="#why">Why Us</a></li>
     <li><a href="#products">Products</a></li>
@@ -605,7 +622,7 @@
       No middlemen. No chemicals. Just the freshest, certified organic vegetables, fruits & grains — grown by verified local farmers and delivered directly to your home in Pune.
     </p>
     <div class="hero-actions">
-      <a href="https://wa.me/918308311348?text=Hi%20Greenlyf Organics!%20I%20want%20to%20order%20organic%20produce" class="btn-primary" target="_blank" rel="noopener">
+      <a href="https://wa.me/918308311348?text=Hi%20Greenlyfe Organics!%20I%20want%20to%20order%20organic%20produce" class="btn-primary" target="_blank" rel="noopener">
         <span>💬</span> Order on WhatsApp
       </a>
       <a href="#products" class="btn-outline"><span>🌾</span> Browse Products</a>
@@ -641,7 +658,7 @@
 <!-- ─── WHY US ─── -->
 <section class="why" id="why">
   <div class="why-header reveal">
-    <p class="section-label">Why Greenlyf Organics</p>
+    <p class="section-label">Why Greenlyfe Organics</p>
     <h2>Pure Food,<br><em>Real Farmers</em></h2>
     <p class="section-desc">Every product on our platform is grown without synthetic chemicals, verified by government-approved certifying bodies, and sourced directly — so you always know exactly who grew your food.</p>
   </div>
@@ -689,95 +706,74 @@
     <a href="https://wa.me/918308311348?text=Full%20product%20list%20please!" class="btn-primary reveal" target="_blank" rel="noopener" style="align-self:flex-end">View All →</a>
   </div>
   <div class="product-grid">
-    <div class="product-card reveal">
-      <div class="product-img p1">🥬</div>
-      <div class="product-info">
-        <div class="product-name">Organic Spinach</div>
-        <div class="product-farmer">👨‍🌾 Ramesh Patil, Talegaon</div>
-        <div class="product-footer">
-          <span class="product-price">₹45 / 250g</span>
-          <span class="product-badge">✓ Certified</span>
-        </div>
-      </div>
-    </div>
-    <div class="product-card reveal reveal-delay-1">
-      <div class="product-img p2">🍅</div>
-      <div class="product-info">
-        <div class="product-name">Desi Tomatoes</div>
-        <div class="product-farmer">👩‍🌾 Sushila Kale, Junnar</div>
-        <div class="product-footer">
-          <span class="product-price">₹55 / 500g</span>
-          <span class="product-badge">✓ Certified</span>
-        </div>
-      </div>
-    </div>
-    <div class="product-card reveal reveal-delay-2">
-      <div class="product-img p3">🧅</div>
-      <div class="product-info">
-        <div class="product-name">Red Onions</div>
-        <div class="product-farmer">👨‍🌾 Ganesh Shinde, Nashik</div>
-        <div class="product-footer">
-          <span class="product-price">₹60 / 1 kg</span>
-          <span class="product-badge">✓ Certified</span>
-        </div>
-      </div>
-    </div>
-    <div class="product-card reveal reveal-delay-3">
-      <div class="product-img p4">🥒</div>
-      <div class="product-info">
-        <div class="product-name">Farm Cucumbers</div>
-        <div class="product-farmer">👩‍🌾 Anita Desai, Mulshi</div>
-        <div class="product-footer">
-          <span class="product-price">₹40 / 500g</span>
-          <span class="product-badge">✓ Certified</span>
-        </div>
-      </div>
-    </div>
-    <div class="product-card reveal">
-      <div class="product-img p5">🌽</div>
-      <div class="product-info">
-        <div class="product-name">Sweet Corn</div>
-        <div class="product-farmer">👨‍🌾 Vijay More, Satara</div>
-        <div class="product-footer">
-          <span class="product-price">₹30 / 2 pcs</span>
-          <span class="product-badge">✓ Certified</span>
-        </div>
-      </div>
-    </div>
-    <div class="product-card reveal reveal-delay-1">
-      <div class="product-img p6">🍆</div>
-      <div class="product-info">
-        <div class="product-name">Brinjal (Wangi)</div>
-        <div class="product-farmer">👩‍🌾 Priya Jadhav, Baramati</div>
-        <div class="product-footer">
-          <span class="product-price">₹35 / 500g</span>
-          <span class="product-badge">✓ Certified</span>
-        </div>
-      </div>
-    </div>
-    <div class="product-card reveal reveal-delay-2">
-      <div class="product-img p7">🥦</div>
-      <div class="product-info">
-        <div class="product-name">Broccoli</div>
-        <div class="product-farmer">👨‍🌾 Suresh Kulkarni, Khandala</div>
-        <div class="product-footer">
-          <span class="product-price">₹80 / 400g</span>
-          <span class="product-badge">✓ Certified</span>
-        </div>
-      </div>
-    </div>
-    <div class="product-card reveal reveal-delay-3">
-      <div class="product-img p8">🌾</div>
-      <div class="product-info">
-        <div class="product-name">Organic Wheat Atta</div>
-        <div class="product-farmer">👩‍🌾 Kavita Pawar, Solapur</div>
-        <div class="product-footer">
-          <span class="product-price">₹120 / 1 kg</span>
-          <span class="product-badge">✓ Certified</span>
-        </div>
+
+  <div class="product-card reveal">
+    <div class="product-img p1">
+<div class="product-img">
+  <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999" alt="Fresh Vegetables">
+</div>
+</div>
+    <div class="product-info">
+      <div class="product-name">Fresh Vegetables</div>
+      <div class="product-farmer">Farm fresh seasonal greens</div>
+      <div class="product-footer">
+        <span class="product-badge">✓ Fresh</span>
+        <span class="product-badge">✓ Organic</span>
       </div>
     </div>
   </div>
+
+  <div class="product-card reveal reveal-delay-1">
+    <div class="product-img p2">
+<div class="product-img">
+  <img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf" alt="Fruits">
+</div>
+</div>
+    <div class="product-info">
+      <div class="product-name">Organic Fruits</div>
+      <div class="product-farmer">Seasonal & naturally ripened</div>
+      <div class="product-footer">
+        <span class="product-badge">✓ Fresh</span>
+        <span class="product-badge">✓ Organic</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card reveal reveal-delay-2">
+    <div class="product-img p3">
+<div class="product-img">
+  <img src="https://images.unsplash.com/photo-1550583724-b2692b85b150?q=80&w=1200&auto=format&fit=crop" alt="Milk">
+</div>
+</div>
+    <div class="product-info">
+      <div class="product-name">Fresh Milk</div>
+      <div class="product-farmer">From grass-fed desi cows</div>
+      <div class="product-footer">
+        <span class="product-badge">✓ Fresh</span>
+        <span class="product-badge">✓ Pure</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card reveal reveal-delay-3">
+    <div class="product-img p4">
+<div class="product-img">
+  <img src="https://images.unsplash.com/photo-1506976785307-8732e854ad03?q=80&w=1200&auto=format&fit=crop" alt="Eggs">
+</div>
+
+</div>
+    <div class="product-info">
+      <div class="product-name">Farm Eggs</div>
+      <div class="product-farmer">Free-range & chemical-free</div>
+      <div class="product-footer">
+        <span class="product-badge">✓ Fresh</span>
+        <span class="product-badge">✓ Desi</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
 </section>
 
 <!-- ─── HOW IT WORKS ─── -->
@@ -848,7 +844,7 @@
     <div class="testi-card reveal reveal-delay-2">
       <div class="testi-quote-mark">"</div>
       <div class="testi-stars">★★★★★</div>
-      <p class="testi-text">As a doctor I recommend organic produce to all my patients. Greenlyf Organics makes it so convenient. Their certification transparency is commendable.</p>
+      <p class="testi-text">As a doctor I recommend organic produce to all my patients. Greenlyfe Organics makes it so convenient. Their certification transparency is commendable.</p>
       <div class="testi-author">
         <div class="testi-avatar">👩‍⚕️</div>
         <div>
@@ -867,7 +863,7 @@
   <h2>Ready to Eat <em style="color:var(--sage)">Pure?</em></h2>
   <p>Join 1,200+ Pune families who've made the switch to certified organic. Order your first box today — it's just a WhatsApp away.</p>
   <div class="cta-actions">
-    <a href="https://wa.me/918308311348?text=Hi%20Greenlyf Organics!%20I'd%20like%20to%20place%20an%20order" class="btn-whatsapp" target="_blank" rel="noopener">
+    <a href="https://wa.me/918308311348?text=Hi%20Greenlyfe Organics!%20I'd%20like%20to%20place%20an%20order" class="btn-whatsapp" target="_blank" rel="noopener">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.94 11.94 0 0012.02 0C5.38 0 0 5.38 0 12c0 2.11.55 4.17 1.6 5.98L0 24l6.2-1.56A11.97 11.97 0 0012.02 24C18.65 24 24 18.62 24 12c0-3.2-1.25-6.21-3.48-8.52zm-8.5 18.35a9.95 9.95 0 01-5.06-1.38l-.36-.22-3.68.93.98-3.57-.24-.37A9.93 9.93 0 012.04 12C2.04 6.5 6.51 2.04 12.02 2.04A9.95 9.95 0 0121.96 12c0 5.5-4.47 9.83-9.94 9.83zm5.43-7.42c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.95 1.17-.18.2-.35.22-.65.07a8.17 8.17 0 01-2.4-1.48 9.04 9.04 0 01-1.66-2.07c-.18-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.68-1.63-.93-2.23-.24-.58-.5-.5-.68-.51h-.58c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.14.2 2.1 3.2 5.1 4.49.71.3 1.27.49 1.7.63.72.23 1.37.2 1.89.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/></svg>
       WhatsApp Us
     </a>
@@ -882,7 +878,7 @@
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
-      <a href="#" class="logo"><span class="logo-leaf">🌿</span> Greenlyf Organics</a>
+      <a href="#" class="logo"><span class="logo-leaf">🌿</span> Greenlyfe Organics</a>
       <p>Connecting certified organic farmers with health-conscious families in Pune. Pure food, honest farming, direct delivery.</p>
     </div>
     <div class="footer-col">
@@ -914,7 +910,7 @@
     </div>
   </div>
   <div class="footer-bottom">
-  <span>© 2026 Greenlyf Organics. All rights reserved.</span>
+  <span>© 2026 Greenlyfe Organics. All rights reserved.</span>
   <span>Made with 🌿 for Pune | <a href="#">Privacy</a> · <a href="#">Terms</a></span>
   <span style="font-size:.82rem; color:rgba(237,229,208,.55);">
     Designed & Built by 
@@ -927,7 +923,7 @@
 
 <!-- ─── FLOATING BUTTONS ─── -->
 <div class="float-btns">
-  <a href="https://wa.me/918308311348?text=Hi%20Greenlyf Organics!%20I%20want%20to%20order" class="float-btn float-wa" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <a href="https://wa.me/918308311348?text=Hi%20Greenlyfe Organics!%20I%20want%20to%20order" class="float-btn float-wa" target="_blank" rel="noopener" aria-label="WhatsApp">
     <span class="float-icon">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.94 11.94 0 0012.02 0C5.38 0 0 5.38 0 12c0 2.11.55 4.17 1.6 5.98L0 24l6.2-1.56A11.97 11.97 0 0012.02 24C18.65 24 24 18.62 24 12c0-3.2-1.25-6.21-3.48-8.52zm-8.5 18.35a9.95 9.95 0 01-5.06-1.38l-.36-.22-3.68.93.98-3.57-.24-.37A9.93 9.93 0 012.04 12C2.04 6.5 6.51 2.04 12.02 2.04A9.95 9.95 0 0121.96 12c0 5.5-4.47 9.83-9.94 9.83zm5.43-7.42c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.95 1.17-.18.2-.35.22-.65.07a8.17 8.17 0 01-2.4-1.48 9.04 9.04 0 01-1.66-2.07c-.18-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.68-1.63-.93-2.23-.24-.58-.5-.5-.68-.51h-.58c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.14.2 2.1 3.2 5.1 4.49.71.3 1.27.49 1.7.63.72.23 1.37.2 1.89.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/></svg>
     </span>
