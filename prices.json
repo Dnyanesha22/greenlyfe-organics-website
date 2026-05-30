@@ -1,6 +1,6 @@
 {
   "Spinach": {
-    "price": "35/kg",
+    "price": "50/kg",
     "hindi": "Ã Â¤ÂªÃ Â¤Â¾Ã Â¤Â²Ã Â¤Â"
   },
   "Fenugreek (Methi)": {
@@ -8,139 +8,139 @@
     "hindi": "Ã Â¤Â®Ã Â¥ÂÃ Â¤Â¥Ã Â¥Â"
   },
   "Coriander": {
-    "price": "Ã¢ÂÂ¹20/bunch",
+    "price": "20/bunch",
     "hindi": "Ã Â¤Â§Ã Â¤Â£Ã Â¥Â"
   },
   "Amaranth (Chawli)": {
-    "price": "Ã¢ÂÂ¹25/bunch",
+    "price": "25/bunch",
     "hindi": "Ã Â¤ÂÃ Â¤ÂµÃ Â¤Â³Ã Â¥Â Ã Â¤Â­Ã Â¤Â¾Ã Â¤ÂÃ Â¥Â"
   },
   "Mint": {
-    "price": "Ã¢ÂÂ¹15/bunch",
+    "price": "15/bunch",
     "hindi": "Ã Â¤ÂªÃ Â¥ÂÃ Â¤Â¦Ã Â¤Â¿Ã Â¤Â¨Ã Â¤Â¾"
   },
   "Curry Leaves": {
-    "price": "Ã¢ÂÂ¹10/bunch",
+    "price": "10/bunch",
     "hindi": "Ã Â¤ÂÃ Â¤Â¢Ã Â¥ÂÃ Â¤ÂªÃ Â¤Â¤Ã Â¥ÂÃ Â¤Â¤Ã Â¤Â¾"
   },
   "Carrot": {
-    "price": "Ã¢ÂÂ¹50/kg",
+    "price": "50/kg",
     "hindi": "Ã Â¤ÂÃ Â¤Â¾Ã Â¤ÂÃ Â¤Â°"
   },
   "Potato": {
-    "price": "Ã¢ÂÂ¹35/kg",
+    "price": "35/kg",
     "hindi": "Ã Â¤Â¬Ã Â¤ÂÃ Â¤Â¾Ã Â¤ÂÃ Â¤Â¾"
   },
   "Onion": {
-    "price": "Ã¢ÂÂ¹40/kg",
+    "price": "40/kg",
     "hindi": "Ã Â¤ÂÃ Â¤Â¾Ã Â¤ÂÃ Â¤Â¦Ã Â¤Â¾"
   },
   "Garlic": {
-    "price": "Ã¢ÂÂ¹120/kg",
+    "price": "120/kg",
     "hindi": "Ã Â¤Â²Ã Â¤Â¸Ã Â¥ÂÃ Â¤Â£"
   },
   "Beetroot": {
-    "price": "Ã¢ÂÂ¹45/kg",
+    "price": "45/kg",
     "hindi": "Ã Â¤Â¬Ã Â¥ÂÃ Â¤Â"
   },
   "Turmeric (Fresh)": {
-    "price": "Ã¢ÂÂ¹80/kg",
+    "price": "80/kg",
     "hindi": "Ã Â¤Â¹Ã Â¤Â³Ã Â¤Â¦"
   },
   "Ginger": {
-    "price": "Ã¢ÂÂ¹90/kg",
+    "price": "90/kg",
     "hindi": "Ã Â¤ÂÃ Â¤Â²Ã Â¤Â"
   },
   "Radish": {
-    "price": "Ã¢ÂÂ¹30/kg",
+    "price": "30/kg",
     "hindi": "Ã Â¤Â®Ã Â¥ÂÃ Â¤Â³Ã Â¤Â¾"
   },
   "Cucumber": {
-    "price": "Ã¢ÂÂ¹40/kg",
+    "price": "40/kg",
     "hindi": "Ã Â¤ÂÃ Â¤Â¾Ã Â¤ÂÃ Â¤Â¡Ã Â¥Â"
   },
   "Bottle Gourd": {
-    "price": "Ã¢ÂÂ¹30/kg",
+    "price": "30/kg",
     "hindi": "Ã Â¤Â¦Ã Â¥ÂÃ Â¤Â§Ã Â¥Â Ã Â¤Â­Ã Â¥ÂÃ Â¤ÂªÃ Â¤Â³Ã Â¤Â¾"
   },
   "Bitter Gourd": {
-    "price": "Ã¢ÂÂ¹60/kg",
+    "price": "60/kg",
     "hindi": "Ã Â¤ÂÃ Â¤Â°Ã Â¤Â²Ã Â¥Â"
   },
   "Ridge Gourd": {
-    "price": "Ã¢ÂÂ¹35/kg",
+    "price": "35/kg",
     "hindi": "Ã Â¤Â¦Ã Â¥ÂÃ Â¤Â¡Ã Â¤ÂÃ Â¥Â"
   },
   "Snake Gourd": {
-    "price": "Ã¢ÂÂ¹40/kg",
+    "price": "40/kg",
     "hindi": "Ã Â¤ÂªÃ Â¤Â¡Ã Â¤ÂµÃ Â¤Â³"
   },
   "Green Beans (French)": {
-    "price": "Ã¢ÂÂ¹70/kg",
+    "price": "70/kg",
     "hindi": "Ã Â¤Â«Ã Â¤Â°Ã Â¤Â¸Ã Â¤Â¬Ã Â¥Â"
   },
   "Green Peas": {
-    "price": "Ã¢ÂÂ¹80/kg",
+    "price": "80/kg",
     "hindi": "Ã Â¤ÂµÃ Â¤Â¾Ã Â¤ÂÃ Â¤Â¾Ã Â¤Â£Ã Â¥Â"
   },
   "Cluster Beans (Gavar)": {
-    "price": "Ã¢ÂÂ¹55/kg",
+    "price": "55/kg",
     "hindi": "Ã Â¤ÂÃ Â¤ÂµÃ Â¤Â¾Ã Â¤Â°"
   },
   "Tomato": {
-    "price": "Ã¢ÂÂ¹45/kg",
+    "price": "45/kg",
     "hindi": "Ã Â¤ÂÃ Â¥ÂÃ Â¤Â®Ã Â¥ÂÃ Â¤ÂÃ Â¥Â"
   },
   "Capsicum (Green)": {
-    "price": "Ã¢ÂÂ¹80/kg",
+    "price": "80/kg",
     "hindi": "Ã Â¤Â¸Ã Â¤Â¿Ã Â¤Â®Ã Â¤Â²Ã Â¤Â¾ Ã Â¤Â®Ã Â¤Â¿Ã Â¤Â°Ã Â¤ÂÃ Â¥Â"
   },
   "Green Chilli": {
-    "price": "Ã¢ÂÂ¹60/kg",
+    "price": "60/kg",
     "hindi": "Ã Â¤Â¹Ã Â¤Â¿Ã Â¤Â°Ã Â¤ÂµÃ Â¥Â Ã Â¤Â®Ã Â¤Â¿Ã Â¤Â°Ã Â¤ÂÃ Â¥Â"
   },
   "Brinjal": {
-    "price": "Ã¢ÂÂ¹35/kg",
+    "price": "35/kg",
     "hindi": "Ã Â¤ÂµÃ Â¤Â¾Ã Â¤ÂÃ Â¤ÂÃ Â¤Â"
   },
   "Pumpkin": {
-    "price": "Ã¢ÂÂ¹30/kg",
+    "price": "30/kg",
     "hindi": "Ã Â¤Â­Ã Â¥ÂÃ Â¤ÂªÃ Â¤Â³Ã Â¤Â¾"
   },
   "Sweet Corn": {
-    "price": "Ã¢ÂÂ¹25/cob",
+    "price": "25/cob",
     "hindi": "Ã Â¤Â®Ã Â¤ÂÃ Â¤Â¾"
   },
   "Broccoli": {
-    "price": "Ã¢ÂÂ¹100/kg",
+    "price": "100/kg",
     "hindi": "Ã Â¤Â¬Ã Â¥ÂÃ Â¤Â°Ã Â¥ÂÃ Â¤ÂÃ Â¥ÂÃ Â¤Â²Ã Â¥Â"
   },
   "Cabbage": {
-    "price": "Ã¢ÂÂ¹30/kg",
+    "price": "30/kg",
     "hindi": "Ã Â¤ÂÃ Â¥ÂÃ Â¤Â¬Ã Â¥Â"
   },
   "Cauliflower": {
-    "price": "Ã¢ÂÂ¹40/kg",
+    "price": "40/kg",
     "hindi": "Ã Â¤Â«Ã Â¥ÂÃ Â¤Â²Ã Â¤ÂÃ Â¥ÂÃ Â¤Â¬Ã Â¥Â"
   },
   "Lady Finger (Bhindi)": {
-    "price": "Ã¢ÂÂ¹50/kg",
+    "price": "50/kg",
     "hindi": "Ã Â¤Â­Ã Â¥ÂÃ Â¤ÂÃ Â¤Â¡Ã Â¥Â"
   },
   "Drumstick (Moringa)": {
-    "price": "Ã¢ÂÂ¹60/kg",
+    "price": "60/kg",
     "hindi": "Ã Â¤Â¶Ã Â¥ÂÃ Â¤ÂµÃ Â¤ÂÃ Â¤Â¾"
   },
   "Colocasia (Arbi)": {
-    "price": "Ã¢ÂÂ¹50/kg",
+    "price": "50/kg",
     "hindi": "Ã Â¤ÂÃ Â¤Â³Ã Â¥Â"
   },
   "Purple Yam (Kand)": {
-    "price": "Ã¢ÂÂ¹70/kg",
+    "price": "70/kg",
     "hindi": "Ã Â¤ÂÃ Â¤Â¾Ã Â¤ÂÃ Â¤Â¦"
   },
   "Sweet Potato": {
-    "price": "Ã¢ÂÂ¹55/kg",
+    "price": "55/kg",
     "hindi": "Ã Â¤Â°Ã Â¤Â¤Ã Â¤Â¾Ã Â¤Â³Ã Â¥Â"
   }
 }
