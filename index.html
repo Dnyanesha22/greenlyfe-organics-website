@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,8 +28,6 @@
     html{scroll-behavior:smooth}
     body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden}
     body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:9999;opacity:.5}
-
-    /* NAV */
     nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 5%;transition:background .4s,box-shadow .4s}
     nav.scrolled{background:rgba(247,242,232,.95);backdrop-filter:blur(12px);box-shadow:0 2px 24px rgba(61,43,31,.10)}
     .logo-wrap{display:flex;flex-direction:column;gap:.05rem;text-decoration:none}
@@ -45,8 +42,6 @@
     .nav-cta::after{display:none !important}
     .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:.3rem}
     .hamburger span{display:block;width:26px;height:2px;background:var(--bark);border-radius:2px;transition:.3s}
-
-    /* HERO */
     .hero{min-height:100svh;display:grid;place-items:center;padding:7rem 5% 4rem;position:relative;overflow:hidden;background:radial-gradient(ellipse 80% 60% at 70% 40%,rgba(74,140,63,.18) 0%,transparent 60%),radial-gradient(ellipse 60% 50% at 20% 70%,rgba(232,160,32,.12) 0%,transparent 55%),var(--cream)}
     .blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.35;animation:drift 12s ease-in-out infinite alternate;pointer-events:none}
     .blob-1{width:500px;height:500px;background:radial-gradient(#7aad6a,#2d5a27);top:-100px;right:-100px;animation-delay:0s}
@@ -70,15 +65,11 @@
     .scroll-hint{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.4rem;color:var(--muted);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;animation:bounce 2s infinite}
     .scroll-hint::after{content:'↓';font-size:1.2rem}
     @keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
-
-    /* MARQUEE */
     .marquee-strip{background:var(--moss);color:var(--cream);padding:.9rem 0;overflow:hidden;font-family:'Caveat',cursive;font-size:1.3rem;font-weight:500}
     .marquee-track{display:flex;animation:marquee 28s linear infinite;width:max-content}
     .marquee-item{white-space:nowrap;padding:0 2.5rem;display:flex;align-items:center;gap:.6rem}
     .marquee-item::after{content:'✦';opacity:.5}
     @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-
-    /* SECTIONS */
     section{padding:7rem 5%}
     .section-label{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--leaf);font-weight:500;margin-bottom:.8rem;display:flex;align-items:center;gap:.5rem}
     .section-label::before{content:'';width:28px;height:2px;background:var(--leaf);display:inline-block}
@@ -91,8 +82,6 @@
     .reveal-delay-2{transition-delay:.2s}
     .reveal-delay-3{transition-delay:.3s}
     .reveal-delay-4{transition-delay:.4s}
-
-    /* WHY */
     .why{background:var(--parchment)}
     .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:3.5rem}
     .why-card{background:var(--cream);border-radius:var(--r);padding:2.2rem;position:relative;overflow:hidden;border:1px solid rgba(61,43,31,.08);transition:transform .3s,box-shadow .3s}
@@ -105,8 +94,6 @@
     .card-body{font-size:.95rem;color:var(--muted);line-height:1.65}
     .card-accent{position:absolute;bottom:-20px;right:-20px;font-size:6rem;opacity:.07;pointer-events:none}
     .why-header{max-width:500px}
-
-    /* PRODUCTS */
     .products-header{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem;margin-bottom:3rem}
     .product-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,max-content));gap:1.5rem;justify-content:center}
     .product-card{background:var(--white);border-radius:var(--r);overflow:hidden;border:1px solid rgba(61,43,31,.07);transition:transform .3s,box-shadow .3s;cursor:pointer}
@@ -123,8 +110,6 @@
     .product-farmer{font-size:.8rem;color:var(--muted);margin:.2rem 0 .8rem}
     .product-footer{display:flex;justify-content:space-between;align-items:center;gap:.5rem;flex-wrap:wrap}
     .product-badge{background:rgba(74,140,63,.12);color:var(--leaf);font-size:.72rem;padding:.25rem .7rem;border-radius:50px;font-weight:500;letter-spacing:.04em}
-
-    /* VEGETABLES MODAL */
     .modal-overlay{position:fixed;inset:0;background:rgba(30,18,8,.75);backdrop-filter:blur(8px);z-index:500;display:flex;align-items:center;justify-content:center;padding:1.5rem;opacity:0;pointer-events:none;transition:opacity .35s ease}
     .modal-overlay.open{opacity:1;pointer-events:all}
     .modal{background:var(--cream);border-radius:24px;width:100%;max-width:860px;max-height:88vh;overflow-y:auto;position:relative;transform:translateY(30px) scale(.97);transition:transform .35s ease;box-shadow:0 40px 100px rgba(0,0,0,.3)}
@@ -148,8 +133,9 @@
     .veg-footer-note{text-align:center;font-size:.82rem;color:var(--muted);padding:1.2rem 0 .5rem;border-top:1px solid rgba(61,43,31,.08);margin-top:.5rem}
     .veg-footer-note a{color:var(--leaf);text-decoration:none;font-weight:600}
     .no-results{text-align:center;color:var(--muted);padding:2.5rem 0;font-size:1rem}
-
-    /* HOW */
+    /* Price loading state */
+    .veg-price.loading{background:rgba(61,43,31,.06);color:transparent;border-radius:20px;animation:shimmer 1.2s infinite}
+    @keyframes shimmer{0%,100%{opacity:.4}50%{opacity:1}}
     .how{background:var(--bark);color:var(--cream);position:relative;overflow:hidden}
     .how::before{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(74,140,63,.3),transparent 70%);pointer-events:none}
     .how h2,.how .section-label{color:var(--cream)}
@@ -163,8 +149,6 @@
     .step h3{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--cream);margin-bottom:.5rem}
     .step p{font-size:.9rem;color:rgba(237,229,208,.7);line-height:1.6}
     .steps-grid .step:not(:last-child)::after{content:'→';position:absolute;top:50%;right:-1.2rem;transform:translateY(-50%);color:rgba(122,173,106,.4);font-size:1.4rem;z-index:1}
-
-    /* TESTIMONIALS */
     .testimonials{background:var(--parchment)}
     .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3.5rem}
     .testi-card{background:var(--cream);border-radius:var(--r);padding:2rem;border:1px solid rgba(61,43,31,.08);position:relative;transition:transform .3s}
@@ -176,8 +160,6 @@
     .testi-avatar{width:42px;height:42px;border-radius:50%;background:var(--sage);display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
     .testi-name{font-weight:600;font-size:.95rem;color:var(--bark)}
     .testi-role{font-size:.8rem;color:var(--muted)}
-
-    /* CTA */
     .cta-banner{background:var(--bark);color:var(--cream);text-align:center;padding:6rem 5%;position:relative;overflow:hidden}
     .cta-banner::before{content:'';position:absolute;top:-150px;left:50%;transform:translateX(-50%);width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(74,140,63,.25),transparent 65%)}
     .cta-banner h2{color:var(--cream);margin-bottom:1rem;position:relative}
@@ -187,8 +169,6 @@
     .btn-whatsapp:hover{background:#1ebe5d;transform:translateY(-3px);box-shadow:0 14px 40px rgba(37,211,102,.45)}
     .btn-call{background:var(--sunflower);color:var(--bark);padding:.9rem 2rem;border-radius:50px;text-decoration:none;font-weight:600;font-size:1rem;display:inline-flex;align-items:center;gap:.6rem;box-shadow:0 8px 32px rgba(232,160,32,.35);transition:transform .25s,box-shadow .25s,filter .25s}
     .btn-call:hover{filter:brightness(1.1);transform:translateY(-3px)}
-
-    /* FOOTER */
     footer{background:#1e1208;color:rgba(237,229,208,.75);padding:4rem 5% 2rem}
     .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
     .footer-brand .logo{color:var(--cream);margin-bottom:.3rem;display:inline-flex}
@@ -201,18 +181,13 @@
     .footer-contact p{font-size:.9rem;margin-bottom:.6rem;display:flex;align-items:center;gap:.5rem}
     .footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-size:.82rem}
     .footer-bottom a{color:var(--sage);text-decoration:none}
-
-    /* FLOAT BUTTONS */
     .float-btns{position:fixed;bottom:2rem;right:1.5rem;z-index:200;display:flex;flex-direction:column;gap:.85rem;align-items:flex-end}
     .float-btn{display:flex;align-items:center;gap:.6rem;border-radius:50px;padding:.75rem 1.4rem;font-weight:600;font-size:.9rem;text-decoration:none;box-shadow:0 6px 28px rgba(0,0,0,.2);transition:transform .25s,box-shadow .25s;white-space:nowrap}
     .float-btn:hover{transform:scale(1.05) translateY(-2px);box-shadow:0 12px 36px rgba(0,0,0,.28)}
     .float-wa{background:#25D366;color:var(--white)}
     .float-call{background:var(--sunflower);color:var(--bark)}
     .float-icon{font-size:1.3rem;display:flex;align-items:center}
-
     @keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
-
-    /* RESPONSIVE */
     @media(max-width:1024px){
       .why-grid{grid-template-columns:repeat(2,1fr)}
       .why-card.big{grid-column:span 2}
@@ -243,7 +218,6 @@
 </head>
 <body>
 
-<!-- NAV -->
 <nav id="navbar">
   <a href="#" class="logo-wrap">
   <span class="logo">
@@ -264,7 +238,6 @@
   </button>
 </nav>
 
-<!-- VEGETABLES MODAL -->
 <div class="modal-overlay" id="vegModal" role="dialog" aria-modal="true" aria-labelledby="vegModalTitle">
   <div class="modal">
     <div class="modal-header">
@@ -279,7 +252,6 @@
   </div>
 </div>
 
-<!-- HERO -->
 <section class="hero" id="home">
   <div class="blob blob-1"></div>
   <div class="blob blob-2"></div>
@@ -302,7 +274,6 @@
   <div class="scroll-hint">Scroll</div>
 </section>
 
-<!-- MARQUEE -->
 <div class="marquee-strip" aria-hidden="true">
   <div class="marquee-track">
     <span class="marquee-item">🥦 Certified Organic</span>
@@ -320,7 +291,6 @@
   </div>
 </div>
 
-<!-- WHY US -->
 <section class="why" id="why">
   <div class="why-header reveal">
     <p class="section-label">Why Greenlyfe Organics</p>
@@ -361,7 +331,6 @@
   </div>
 </section>
 
-<!-- PRODUCTS -->
 <section id="products">
   <div class="products-header">
     <div class="reveal">
@@ -426,7 +395,6 @@
   </div>
 </section>
 
-<!-- HOW IT WORKS -->
 <section class="how" id="how">
   <div style="text-align:center;max-width:580px;margin:0 auto" class="reveal">
     <p class="section-label">Simple Process</p>
@@ -460,7 +428,6 @@
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
 <section class="testimonials" id="testimonials">
   <div style="text-align:center" class="reveal">
     <p class="section-label">Customer Love</p>
@@ -506,7 +473,6 @@
   </div>
 </section>
 
-<!-- CTA -->
 <section class="cta-banner" id="contact">
   <h2>Ready to Eat <em style="color:var(--sage)">Pure?</em></h2>
   <p>Join 1,200+ Pune families who've made the switch to certified organic. Order your first box today — it's just a WhatsApp away.</p>
@@ -522,13 +488,12 @@
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
       <a href="#" class="logo-wrap">
-        <span class="logo" >
-          <img src="logopng.png" alt="Greenlyfe Organics"style="height:40px;width:auto;">Greenlyfe Organics</span>
+        <span class="logo">
+          <img src="logopng.png" alt="Greenlyfe Organics" style="height:40px;width:auto;">Greenlyfe Organics</span>
         <span class="logo-tagline">Nature's purity delivered fresh</span>
       </a>
       <p>Connecting certified organic farmers with health-conscious families in Pune. Pure food, honest farming, direct delivery.</p>
@@ -568,7 +533,6 @@
   </div>
 </footer>
 
-<!-- FLOATING BUTTONS -->
 <div class="float-btns">
   <a href="https://wa.me/918308311348?text=Hi%20Greenlyfe%20Organics!%20I%20want%20to%20order" class="float-btn float-wa" target="_blank" rel="noopener" aria-label="WhatsApp">
     <span class="float-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.94 11.94 0 0012.02 0C5.38 0 0 5.38 0 12c0 2.11.55 4.17 1.6 5.98L0 24l6.2-1.56A11.97 11.97 0 0012.02 24C18.65 24 24 18.62 24 12c0-3.2-1.25-6.21-3.48-8.52zm-8.5 18.35a9.95 9.95 0 01-5.06-1.38l-.36-.22-3.68.93.98-3.57-.24-.37A9.93 9.93 0 012.04 12C2.04 6.5 6.51 2.04 12.02 2.04A9.95 9.95 0 0121.96 12c0 5.5-4.47 9.83-9.94 9.83zm5.43-7.42c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.95 1.17-.18.2-.35.22-.65.07a8.17 8.17 0 01-2.4-1.48 9.04 9.04 0 01-1.66-2.07c-.18-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.68-1.63-.93-2.23-.24-.58-.5-.5-.68-.51h-.58c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.14.2 2.1 3.2 5.1 4.49.71.3 1.27.49 1.7.63.72.23 1.37.2 1.89.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/></svg></span>
@@ -581,63 +545,79 @@
 </div>
 
 <script>
-// ── Vegetable Data ──
-const VEG_DATA = [
+// ── Static structure (categories + emojis — these never change) ──
+const VEG_STRUCTURE = [
   { cat:"Leafy Greens", items:[
-    {e:"🥬",n:"Spinach",h:"पालक",p:"₹40/kg"},
-    {e:"🥬",n:"Fenugreek (Methi)",h:"मेथी",p:"₹30/bunch"},
-    {e:"🥬",n:"Coriander",h:"धणे",p:"₹20/bunch"},
-    {e:"🥬",n:"Amaranth (Chawli)",h:"चवळी भाजी",p:"₹25/bunch"},
-    {e:"🌿",n:"Mint",h:"पुदिना",p:"₹15/bunch"},
-    {e:"🥬",n:"Curry Leaves",h:"कढीपत्ता",p:"₹10/bunch"},
+    {e:"🥬",n:"Spinach"},{e:"🥬",n:"Fenugreek (Methi)"},{e:"🥬",n:"Coriander"},
+    {e:"🥬",n:"Amaranth (Chawli)"},{e:"🌿",n:"Mint"},{e:"🥬",n:"Curry Leaves"},
   ]},
   { cat:"Root Vegetables", items:[
-    {e:"🥕",n:"Carrot",h:"गाजर",p:"₹50/kg"},
-    {e:"🥔",n:"Potato",h:"बटाटा",p:"₹35/kg"},
-    {e:"🧅",n:"Onion",h:"कांदा",p:"₹40/kg"},
-    {e:"🧄",n:"Garlic",h:"लसूण",p:"₹120/kg"},
-    {e:"🟤",n:"Beetroot",h:"बीट",p:"₹45/kg"},
-    {e:"🟡",n:"Turmeric (Fresh)",h:"हळद",p:"₹80/kg"},
-    {e:"🟡",n:"Ginger",h:"आलं",p:"₹90/kg"},
-    {e:"🟣",n:"Radish",h:"मुळा",p:"₹30/kg"},
+    {e:"🥕",n:"Carrot"},{e:"🥔",n:"Potato"},{e:"🧅",n:"Onion"},{e:"🧄",n:"Garlic"},
+    {e:"🟤",n:"Beetroot"},{e:"🟡",n:"Turmeric (Fresh)"},{e:"🟡",n:"Ginger"},{e:"🟣",n:"Radish"},
   ]},
   { cat:"Gourds & Pods", items:[
-    {e:"🥒",n:"Cucumber",h:"काकडी",p:"₹40/kg"},
-    {e:"🥒",n:"Bottle Gourd",h:"दुधी भोपळा",p:"₹30/kg"},
-    {e:"🟢",n:"Bitter Gourd",h:"करले",p:"₹60/kg"},
-    {e:"🟢",n:"Ridge Gourd",h:"दोडकी",p:"₹35/kg"},
-    {e:"🟢",n:"Snake Gourd",h:"पडवळ",p:"₹40/kg"},
-    {e:"🫘",n:"Green Beans (French)",h:"फरसबी",p:"₹70/kg"},
-    {e:"🫛",n:"Green Peas",h:"वाटाणे",p:"₹80/kg"},
-    {e:"🟢",n:"Cluster Beans (Gavar)",h:"गवार",p:"₹55/kg"},
+    {e:"🥒",n:"Cucumber"},{e:"🥒",n:"Bottle Gourd"},{e:"🟢",n:"Bitter Gourd"},
+    {e:"🟢",n:"Ridge Gourd"},{e:"🟢",n:"Snake Gourd"},{e:"🫘",n:"Green Beans (French)"},
+    {e:"🫛",n:"Green Peas"},{e:"🟢",n:"Cluster Beans (Gavar)"},
   ]},
   { cat:"Fruiting Vegetables", items:[
-    {e:"🍅",n:"Tomato",h:"टोमॅटो",p:"₹45/kg"},
-    {e:"🫑",n:"Capsicum (Green)",h:"सिमला मिरची",p:"₹80/kg"},
-    {e:"🌶️",n:"Green Chilli",h:"हिरवी मिरची",p:"₹60/kg"},
-    {e:"🍆",n:"Brinjal",h:"वांगं",p:"₹35/kg"},
-    {e:"🎃",n:"Pumpkin",h:"भोपळा",p:"₹30/kg"},
-    {e:"🌽",n:"Sweet Corn",h:"मका",p:"₹25/cob"},
-    {e:"🥦",n:"Broccoli",h:"ब्रोकोली",p:"₹100/kg"},
-    {e:"🥬",n:"Cabbage",h:"कोबी",p:"₹30/kg"},
-    {e:"🥦",n:"Cauliflower",h:"फुलकोबी",p:"₹40/kg"},
-    {e:"🌰",n:"Lady Finger (Bhindi)",h:"भेंडी",p:"₹50/kg"},
+    {e:"🍅",n:"Tomato"},{e:"🫑",n:"Capsicum (Green)"},{e:"🌶️",n:"Green Chilli"},
+    {e:"🍆",n:"Brinjal"},{e:"🎃",n:"Pumpkin"},{e:"🌽",n:"Sweet Corn"},
+    {e:"🥦",n:"Broccoli"},{e:"🥬",n:"Cabbage"},{e:"🥦",n:"Cauliflower"},
+    {e:"🌰",n:"Lady Finger (Bhindi)"},
   ]},
   { cat:"Seasonal Specials", items:[
-    {e:"🟢",n:"Drumstick (Moringa)",h:"शेवगा",p:"₹60/kg"},
-    {e:"🌾",n:"Colocasia (Arbi)",h:"आळू",p:"₹50/kg"},
-    {e:"🟣",n:"Purple Yam (Kand)",h:"कांद",p:"₹70/kg"},
-    {e:"🟤",n:"Sweet Potato",h:"रताळे",p:"₹55/kg"},
+    {e:"🟢",n:"Drumstick (Moringa)"},{e:"🌾",n:"Colocasia (Arbi)"},
+    {e:"🟣",n:"Purple Yam (Kand)"},{e:"🟤",n:"Sweet Potato"},
   ]}
 ];
 
-function renderVeg(data){
+// ── Prices loaded from prices.json ──
+let PRICES = {};
+let pricesLoaded = false;
+
+// Fetch prices.json — add ?v=DATE to bust cache daily
+function loadPrices() {
+  const today = new Date().toISOString().slice(0,10); // e.g. "2026-05-30"
+  return fetch('prices.json?v=' + today)
+    .then(r => {
+      if (!r.ok) throw new Error('Could not load prices.json');
+      return r.json();
+    })
+    .then(data => {
+      PRICES = data;
+      pricesLoaded = true;
+    })
+    .catch(() => {
+      // If file missing, show prices as "—"
+      pricesLoaded = true;
+    });
+}
+
+// ── Merge structure + prices ──
+function buildVegData(structureFilter) {
+  const source = structureFilter || VEG_STRUCTURE;
+  return source.map(cat => ({
+    cat: cat.cat,
+    items: cat.items.map(v => ({
+      e: v.e,
+      n: v.n,
+      h: (PRICES[v.n] && PRICES[v.n].hindi) || '',
+      p: (PRICES[v.n] && PRICES[v.n].price) || '—'
+    }))
+  }));
+}
+
+function renderVeg(data) {
   const c = document.getElementById('vegContent');
-  if(!data.length){ c.innerHTML='<p class="no-results">No vegetables found. Try a different search!</p>'; return; }
-  c.innerHTML = data.map(cat=>`
+  if (!data.length) {
+    c.innerHTML = '<p class="no-results">No vegetables found. Try a different search!</p>';
+    return;
+  }
+  c.innerHTML = data.map(cat => `
     <p class="veg-cat-label">${cat.cat}</p>
     <div class="veg-grid">
-      ${cat.items.map(v=>`
+      ${cat.items.map(v => `
         <div class="veg-item" onclick="orderVeg('${v.n}')">
           <span class="veg-emoji">${v.e}</span>
           <span class="veg-name">${v.n}</span>
@@ -647,78 +627,92 @@ function renderVeg(data){
     </div>`).join('');
 }
 
-function filterVeg(q){
-  if(!q.trim()){ renderVeg(VEG_DATA); return; }
+function filterVeg(q) {
+  if (!q.trim()) { renderVeg(buildVegData()); return; }
   const lq = q.toLowerCase();
-  const filtered = VEG_DATA.map(cat=>({
-    ...cat,
-    items: cat.items.filter(v=>v.n.toLowerCase().includes(lq)||v.h.includes(lq))
-  })).filter(cat=>cat.items.length);
-  renderVeg(filtered);
+  const filtered = VEG_STRUCTURE
+    .map(cat => ({
+      cat: cat.cat,
+      items: cat.items.filter(v => v.n.toLowerCase().includes(lq))
+    }))
+    .filter(cat => cat.items.length);
+  renderVeg(buildVegData(filtered));
 }
 
-function orderVeg(name){
-  window.open(`https://wa.me/918308311348?text=Hi%20Greenlyfe%20Organics!%20I%20want%20to%20order%20${encodeURIComponent(name)}`,'_blank','noopener');
+function orderVeg(name) {
+  window.open(`https://wa.me/918308311348?text=Hi%20Greenlyfe%20Organics!%20I%20want%20to%20order%20${encodeURIComponent(name)}`, '_blank', 'noopener');
 }
 
-function openVegModal(){
+function openVegModal() {
   const m = document.getElementById('vegModal');
   m.classList.add('open');
-  document.body.style.overflow='hidden';
-  document.getElementById('vegSearch').value='';
-  renderVeg(VEG_DATA);
-  setTimeout(()=>document.getElementById('vegSearch').focus(),400);
+  document.body.style.overflow = 'hidden';
+  document.getElementById('vegSearch').value = '';
+
+  if (pricesLoaded) {
+    renderVeg(buildVegData());
+  } else {
+    // Show shimmer while loading
+    document.getElementById('vegContent').innerHTML =
+      '<p style="text-align:center;color:var(--muted);padding:2rem">Loading today\'s prices…</p>';
+    loadPrices().then(() => renderVeg(buildVegData()));
+  }
+  setTimeout(() => document.getElementById('vegSearch').focus(), 400);
 }
 
-function closeVegModal(){
+function closeVegModal() {
   document.getElementById('vegModal').classList.remove('open');
-  document.body.style.overflow='';
+  document.body.style.overflow = '';
 }
 
-document.getElementById('vegModal').addEventListener('click',function(e){
-  if(e.target===this) closeVegModal();
+document.getElementById('vegModal').addEventListener('click', function(e) {
+  if (e.target === this) closeVegModal();
 });
-document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeVegModal(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeVegModal(); });
+
+// Pre-load prices in background so modal opens instantly
+loadPrices();
 
 // ── Navbar scroll ──
 const navbar = document.getElementById('navbar');
-window.addEventListener('scroll',()=>navbar.classList.toggle('scrolled',scrollY>60),{passive:true});
+window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', scrollY > 60), { passive: true });
 
 // ── Mobile menu ──
-function toggleMenu(){document.getElementById('navLinks').classList.toggle('open')}
-document.querySelectorAll('#navLinks a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('open')));
+function toggleMenu() { document.getElementById('navLinks').classList.toggle('open'); }
+document.querySelectorAll('#navLinks a').forEach(a => a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open')));
 
 // ── Reveal on scroll ──
-const observer = new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});
-document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+const observer = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }), { threshold: .12 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
 // ── Counter animation ──
-function animateCounter(el){
-  const target=+el.dataset.target, duration=1800, start=performance.now();
-  function update(now){
-    const p=Math.min((now-start)/duration,1), ease=1-Math.pow(1-p,3);
-    el.textContent=Math.floor(ease*target)+(target>=10?'+':'');
-    if(p<1) requestAnimationFrame(update);
+function animateCounter(el) {
+  const target = +el.dataset.target, duration = 1800, start = performance.now();
+  function update(now) {
+    const p = Math.min((now - start) / duration, 1), ease = 1 - Math.pow(1 - p, 3);
+    el.textContent = Math.floor(ease * target) + (target >= 10 ? '+' : '');
+    if (p < 1) requestAnimationFrame(update);
   }
   requestAnimationFrame(update);
 }
-const counterObserver=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){animateCounter(e.target);counterObserver.unobserve(e.target)}}),{threshold:.5});
-document.querySelectorAll('[data-target]').forEach(el=>counterObserver.observe(el));
+const counterObserver = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) { animateCounter(e.target); counterObserver.unobserve(e.target); } }), { threshold: .5 });
+document.querySelectorAll('[data-target]').forEach(el => counterObserver.observe(el));
 
 // ── Blob parallax ──
-document.addEventListener('mousemove',e=>{
-  const dx=(e.clientX-innerWidth/2)/innerWidth, dy=(e.clientY-innerHeight/2)/innerHeight;
-  document.querySelectorAll('.blob').forEach((b,i)=>{const f=(i+1)*8;b.style.transform=`translate(${dx*f}px,${dy*f}px)`});
-},{passive:true});
+document.addEventListener('mousemove', e => {
+  const dx = (e.clientX - innerWidth / 2) / innerWidth, dy = (e.clientY - innerHeight / 2) / innerHeight;
+  document.querySelectorAll('.blob').forEach((b, i) => { const f = (i + 1) * 8; b.style.transform = `translate(${dx * f}px,${dy * f}px)`; });
+}, { passive: true });
 
 // ── Product card tilt ──
-document.querySelectorAll('.product-card').forEach(card=>{
-  card.addEventListener('mousemove',e=>{
-    const r=card.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
-    card.style.transform=`perspective(600px) rotateY(${x*10}deg) rotateX(${-y*10}deg) translateY(-8px) scale(1.02)`;
+document.querySelectorAll('.product-card').forEach(card => {
+  card.addEventListener('mousemove', e => {
+    const r = card.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
+    card.style.transform = `perspective(600px) rotateY(${x * 10}deg) rotateX(${-y * 10}deg) translateY(-8px) scale(1.02)`;
   });
-  card.addEventListener('mouseleave',()=>card.style.transform='');
+  card.addEventListener('mouseleave', () => card.style.transform = '');
 });
 </script>
 </body>
 </html>
+
