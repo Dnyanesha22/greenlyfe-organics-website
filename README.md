@@ -3,7 +3,7 @@
 A modern responsive landing page for an organic farming business.
 
 ## 🚀 Live Demo
-👉 http://www.greenlyfeorganics.com
+👉 https://www.greenlyfeorganics.com
 
 ## 💡 Features
 - Clean UI/UX design
