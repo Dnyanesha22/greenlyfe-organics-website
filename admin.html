@@ -253,6 +253,7 @@
 
 <script>
   let currentSha = null;
+  let currentPrices = {};
 
   // Load saved settings
   window.onload = () => {
@@ -297,12 +298,14 @@
         const data = await res.json();
         currentSha = data.sha;
         prices = JSON.parse(atob(data.content.replace(/\n/g, '')));
+        currentPrices = prices;
       } else if (res.status === 404) {
-        // File doesn't exist yet — start empty
+        // File doesn't exist yet — start with a few examples
         currentSha = null;
         prices = {
-          "item1": { "name": "Organic Tomatoes", "price": 3.99, "unit": "per lb" },
-          "item2": { "name": "Baby Spinach", "price": 4.49, "unit": "per bag" }
+          "Tomato": { "price": "₹45/kg", "hindi": "टोमॅटो" },
+          "Spinach": { "price": "₹40/kg", "hindi": "पालक" },
+          "Onion": { "price": "₹40/kg", "hindi": "कांदा" }
         };
       } else {
         throw new Error(`GitHub error: ${res.status}`);
@@ -324,27 +327,22 @@
   function renderPrices(prices) {
     const container = document.getElementById('price-list');
     container.innerHTML = '';
-    Object.entries(prices).forEach(([key, item]) => addRow(key, item));
+    // Format: { "Spinach": { "price": "₹40/kg", "hindi": "पालक" }, ... }
+    Object.entries(prices).forEach(([name, item]) => addRow(name, item.price || ''));
   }
 
-  function addRow(key = '', item = { name: '', price: '', unit: '' }) {
+  function addRow(name = '', price = '') {
     const container = document.getElementById('price-list');
-    const id = key || 'item_' + Date.now();
     const div = document.createElement('div');
     div.className = 'price-row price-row-4';
-    div.dataset.key = id;
     div.innerHTML = `
       <div>
         <label class="item-label">Item Name</label>
-        <input type="text" class="item-name" value="${item.name}" placeholder="e.g. Organic Tomatoes">
+        <input type="text" class="item-name" value="${name}" placeholder="e.g. Tomato">
       </div>
-      <div>
-        <label class="item-label">Price ($)</label>
-        <input type="number" class="item-price" value="${item.price}" placeholder="0.00" step="0.01" min="0">
-      </div>
-      <div>
-        <label class="item-label">Unit</label>
-        <input type="text" class="item-unit" value="${item.unit}" placeholder="per lb">
+      <div style="grid-column:span 2">
+        <label class="item-label">Price (e.g. ₹45/kg or ₹20/bunch)</label>
+        <input type="text" class="item-price" value="${price}" placeholder="₹45/kg">
       </div>
       <button class="remove-btn" onclick="this.closest('.price-row').remove()">✕</button>
     `;
@@ -360,11 +358,11 @@
 
     rows.forEach((row, i) => {
       const name = row.querySelector('.item-name').value.trim();
-      const price = parseFloat(row.querySelector('.item-price').value);
-      const unit = row.querySelector('.item-unit').value.trim();
+      const price = row.querySelector('.item-price').value.trim();
       if (name) {
-        const key = name.toLowerCase().replace(/\s+/g, '_').replace(/[^a-z0-9_]/g, '') || `item_${i}`;
-        prices[key] = { name, price: isNaN(price) ? 0 : price, unit };
+        // Preserve existing hindi text if already in file, otherwise blank
+        const existing = currentPrices[name] || {};
+        prices[name] = { price: price || '—', hindi: existing.hindi || '' };
       }
     });
 
@@ -409,4 +407,3 @@
 </script>
 </body>
 </html>
-
