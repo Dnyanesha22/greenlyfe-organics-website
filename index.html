@@ -603,7 +603,7 @@ function buildVegData(structureFilter) {
       e: v.e,
       n: v.n,
       h: (PRICES[v.n] && PRICES[v.n].hindi) || '',
-      p: (PRICES[v.n] && PRICES[v.n].price) || '—'
+      p: PRICES[v.n] ? '₹' + PRICES[v.n].price : '—'
     }))
   }));
 }
@@ -715,4 +715,3 @@ document.querySelectorAll('.product-card').forEach(card => {
 </script>
 </body>
 </html>
-
